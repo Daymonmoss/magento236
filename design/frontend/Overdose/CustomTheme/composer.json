@@ -1,0 +1,24 @@
+{
+    "name": "Overdose/CustomTheme",
+    "description": "Overdose CustomTheme for learning",
+    "license": [
+        "SelfMade Corp."
+    ],
+    "type": "magento2-theme",
+    "version": "0.0.1",
+    "authors": [
+        {
+            "name": "Daymon Moss",
+            "email": "daymonmoss@gmail.com",
+            "homepage": "https://daymonmoss.github.io/",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "files": [ "registration.php" ],
+        "psr-4": {
+            "Vendor\\Module\\": ""
+        }
+    }
+}
+
