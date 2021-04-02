@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-namespace Daymonmoss\Landing\Controller\Index;
+namespace Konsol\Landing\Controller\Index;
 
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\ResponseInterface;

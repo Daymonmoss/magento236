@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
     <router id="standard">
-        <route id="daymonmoss_landing" frontName="landing">
-            <module name="Daymonmoss_Landing" />
+        <route id="konsol_landing" frontName="landing">
+            <module name="Konsol_Landing" />
         </route>
     </router>
 </config>

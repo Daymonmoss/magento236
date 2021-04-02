@@ -1,4 +1,4 @@
-require(['jquery', 'mage/url', 'Daymonmoss_Landing/js/bootstrap.bundle.min'], function ($, urlBuilder, bootstrap) {
+require(['jquery', 'mage/url', 'Konsol_Landing/js/bootstrap.bundle.min'], function ($, urlBuilder, bootstrap) {
         //$(".loading-mask").loader("hide");
         $("#return").hide();
         $(function () {
@@ -44,7 +44,7 @@ require(['jquery', 'mage/url', 'Daymonmoss_Landing/js/bootstrap.bundle.min'], fu
             var dataString = 'name=' + name + '&email=' + email + '&subject=' + subject + '&message=' + message;
             $.ajax({
                 type: "POST",
-                url: "Daymonmoss_Landing::php/mailer.php",
+                url: "Konsol_Landing::php/mailer.php",
                 data: dataString,
                 success:
                     console.log("OK")

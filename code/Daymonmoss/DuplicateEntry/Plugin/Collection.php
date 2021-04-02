@@ -1,21 +1,22 @@
 <?php
 namespace Daymonmoss\DuplicateEntry\Plugin;
-use Magento\Framework\Data\Collection\EntityFactoryInterface;
-use Magento\Framework\Option\ArrayInterface;
+
+use Magento\Eav\Model\Entity\Collection\AbstractCollection;
+use Magento\Framework\DataObject;
 
 class Collection
 {
     /**
-     * @param \Magento\Eav\Model\Entity\Collection\AbstractCollection $subject
+     * @param AbstractCollection $subject
      * @param \Closure $process
-     * @param \Magento\Framework\DataObject $dataObject
+     * @param DataObject $dataObject
      * @return $this
      */
-    public function aroundAddItem(\Magento\Eav\Model\Entity\Collection\AbstractCollection $subject, \Closure $process, \Magento\Framework\DataObject $dataObject)
+    public function aroundAddItem(AbstractCollection $subject, \Closure $process, DataObject $dataObject)
     {
-        try{
+        try {
             return $process($dataObject);
-        }catch ( \Exception $e){
+        } catch (\Exception $e) {
             return $this;
         }
     }
