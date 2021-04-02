@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block class="Overdose\LessonOne\Block\Overdose"
+                   name="i.am.homepage.block"
+                   template="Overdose_LessonOne::homepage.phtml">
+                <arguments>
+                    <argument name="view_model" xsi:type="object">Overdose\LessonOne\ViewModel\OneOne</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="overdose_crud" resource="default" engine="innodb" comment="Education Table">
+        <column xsi:type="int" name="id" nullable="false" identity="true"/>
+        <column xsi:type="text" name="name" nullable="false" />
+        <column xsi:type="smallint" name="age" unsigned="true" nullable="false" identity="false"/>
+        <column xsi:type="text" name="description" nullable="false" />
+        <column xsi:type="timestamp" name="updated_at" nullable="false" default="CURRENT_TIMESTAMP" />
+        <column xsi:type="timestamp" name="created_at" on_update="false" nullable="false" default="CURRENT_TIMESTAMP" />
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id" />
+        </constraint>
+        <index referenceId="OVERDOSE_CRUD_FULL_TEXT" indexType="fulltext">
+            <column name="name"/>
+            <column name="description"/>
+        </index>
+    </table>
+</schema>
+
+
+

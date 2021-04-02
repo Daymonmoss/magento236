@@ -1,0 +1,48 @@
+<?php
+/**
+ * @var Overblock $block,
+ * @var Newview $viewModel
+ **/
+use Overdose\Custom\Block\Overblock;
+use Overdose\Plug\ViewModel\Newview;
+$viewModel = $this->getData('plug.newview');
+?>
+
+   <h1>This is Plug Overdose Module!</h1>
+
+<?= $block->showBlock(); ?>
+<br>
+<?= $viewModel->fromViewModel(); ?>
+<br>
+<?= $viewModel->getName('Before', 'After'); ?>
+<br>
+<?= $viewModel->simpleTextToTheShell(); ?>
+
+<table>
+    <thead>
+    <tr>
+        <td>id:</td>
+        <td>name:</td>
+        <td>age:</td>
+        <td>description:</td>
+        <td>updated_at:</td>
+        <td>created_at:</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <?php if ($viewModel->getAllStudents() !== null) {
+        foreach ($viewModel->getAllStudents() as $student): ?>
+    <tr>
+        <?php foreach ($student->getData() as $key => $value) :  ?>
+            <td><?= $value ?></td>
+        <?php  endforeach; ?>
+    </tr>
+    <?php  endforeach; ?>
+    <?php
+    } else {
+        echo "Table is empty, yet bro! Check your AddDataToTheTable.php";
+    } ?>
+    </tbody>
+</table>
+

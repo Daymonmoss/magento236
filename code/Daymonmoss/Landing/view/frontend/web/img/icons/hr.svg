@@ -1,0 +1,19 @@
+<svg id="Design" xmlns="http://www.w3.org/2000/svg" width="196" height="7" viewBox="0 0 196 7">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e74c3c;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #f1ebe7;
+        stroke-width: 1px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <circle class="cls-1" cx="98.282" cy="3.5" r="3.313"/>
+  <path class="cls-2" d="M861,495.083V494.5h79.5v0.584H861Z" transform="translate(-860.5 -491)"/>
+  <path id="Shape_171_copy" data-name="Shape 171 copy" class="cls-2" d="M976.505,495.083V494.5H1056v0.584H976.505Z" transform="translate(-860.5 -491)"/>
+</svg>

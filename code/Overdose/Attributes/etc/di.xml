@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Overdose\Attributes\Setup\Patch\Data\CreateSimpleProducts">
+        <arguments>
+            <argument name="state" xsi:type="object">Magento\Framework\App\State</argument>
+            <argument name="option" xsi:type="object">Magento\Catalog\Model\Product\Option</argument>
+            <argument name="mediaDIR" xsi:type="object">Magento\Framework\Filesystem\DirectoryList</argument>
+            <argument name="categoryLinkManagement" xsi:type="object">Magento\Catalog\Api\CategoryLinkManagementInterface</argument>
+        </arguments>
+    </type>
+    <type name="Overdose\Attributes\Setup\Patch\Data\CreateConfigurableProduct">
+        <arguments>
+            <argument name="state" xsi:type="object">Magento\Framework\App\State</argument>
+            <argument name="option" xsi:type="object">Magento\Catalog\Model\Product\Option</argument>
+            <argument name="mediaDIR" xsi:type="object">Magento\Framework\Filesystem\DirectoryList</argument>
+            <argument name="categoryLinkManagement" xsi:type="object">Magento\Catalog\Api\CategoryLinkManagementInterface</argument>
+        </arguments>
+    </type>
+</config>

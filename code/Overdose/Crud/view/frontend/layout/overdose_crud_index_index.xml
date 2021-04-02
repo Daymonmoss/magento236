@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="header.container" remove="true" />
+        <referenceContainer name="footer" remove="true" />
+        <referenceContainer name="content">
+            <block class="Overdose\Crud\Block\Overblock"
+                   name="i.am.crud.block"
+                   template="Overdose_Crud::crudpage.phtml" >
+                <arguments>
+                    <argument name="crud.newview" xsi:type="object">Overdose\Crud\ViewModel\Newview</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

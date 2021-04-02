@@ -1,0 +1,395 @@
+<header>
+    <div class="container row mx-auto">
+        <div class="col-4 col-lg-3 d-flex"><span class="logo"></span></div>
+        <ul class="navbar list-unstyled col-8 col-lg-9">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#team">About us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#blog">Portfolio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#price">Pricing</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#team" tabindex="-1" aria-disabled="true">Team</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#blog" tabindex="-1" aria-disabled="true">Blog</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact" tabindex="-1" aria-disabled="true">Contact</a>
+            </li>
+        </ul>
+    </div>
+
+</header>
+<main>
+    <section id="home">
+        <div id="carousel" class="w-100 carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="<?php echo $this->getViewFileUrl('Daymonmoss_Landing::img/b.png'); ?>"
+                         class="d-block w-100" alt="dark-background">
+                    <div class="container">
+                        <h3>Our Clients Are Our First Priority</h3>
+                        <h1>Welcome to Bino</h1>
+                        <div class="hr"></div>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="<?php echo $this->getViewFileUrl('Daymonmoss_Landing::img/lb.png'); ?>"
+                         class="d-block w-100" alt="light-background">
+                    <div class="container">
+                        <h3>Our Clients Are Our Second Priority</h3>
+                        <h2>Welcome to Bino</h2>
+                        <div class="hr"></div>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="<?php echo $this->getViewFileUrl('Daymonmoss_Landing::img/db.png'); ?>"
+                         class="d-block w-100" alt="solid-background">
+                    <div class="container">
+                        <h3>Our Clients Are Our Third Priority</h3>
+                        <h2>Welcome to Bino</h2>
+                        <div class="hr"></div>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carousel" role="button" data-bs-slide="prev">
+            <span class="prev-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45">
+                      <rect id="left-rect" fill-opacity="0.25" fill="#fff" width="45" height="45" rx="2" ry="2"/>
+                      <path id="left-arrow" fill-opacity="0.1" fill-rule="evenodd"
+                            d="M76.831,451.736a0.652,0.652,0,0,0-.2-0.462l-1-1a0.636,0.636,0,0,0-.922,0l-9.341,9.341a0.632,0.632,0,0,0,0,.923l9.341,9.339a0.629,0.629,0,0,0,.922,0l1-1a0.631,0.631,0,0,0,0-.922l-7.877-7.877,7.877-7.877A0.7,0.7,0,0,0,76.831,451.736Z"
+                            transform="translate(-49 -437)"/>
+                </svg>
+            </span>
+
+                <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel" role="button" data-bs-slide="next">
+            <span class="next-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45">
+                     <rect id="right-rect" fill-opacity="0.25" fill="#fff" width="45" height="45" rx="2" ry="2"/>
+                     <path id="right-arrow" fill-opacity="0.1" fill-rule="evenodd"
+                           d="M1843.17,467.259a0.656,0.656,0,0,0,.2.462l1,1a0.629,0.629,0,0,0,.92,0l9.34-9.341a0.631,0.631,0,0,0,0-.922l-9.34-9.34a0.627,0.627,0,0,0-.92,0l-1,1a0.689,0.689,0,0,0-.2.461,0.7,0.7,0,0,0,.2.462l7.88,7.875-7.88,7.879A0.689,0.689,0,0,0,1843.17,467.259Z"
+                           transform="translate(-1826 -437)"/>
+                </svg>
+            </span>
+                <span class="visually-hidden">Next</span>
+            </a>
+        </div>
+        <a id="more" href="#blog">
+            <svg xmlns="http://www.w3.org/2000/svg" width="74" height="74" viewBox="0 0 74 74">
+                <circle fill="#fff" opacity="0.25" class="cls-1" cx="37" cy="37" r="37"/>
+                <circle fill="#f4f5f9" cx="37" cy="37" r="32"/>
+                <path id="anchor" fill="#999" fill-rule="evenodd"
+                      d="M970.89,988.3l-2.509-3.774a0.635,0.635,0,0,0-1.062,0L964.81,988.3a0.667,0.667,0,0,0-.036.674,0.64,0.64,0,0,0,.567.348h1.238a6.853,6.853,0,0,1-5.083,4.613V979.466h2a1.018,1.018,0,0,0,0-2.036h-1.028a3.726,3.726,0,0,0,1.176-2.717,3.64,3.64,0,1,0-7.279,0,3.73,3.73,0,0,0,1.176,2.717h-1.027a1.018,1.018,0,0,0,0,2.036h2v14.465a6.852,6.852,0,0,1-5.084-4.613h1.239a0.642,0.642,0,0,0,.567-0.348,0.665,0.665,0,0,0-.037-0.674l-2.509-3.774a0.634,0.634,0,0,0-1.061,0L949.11,988.3a0.665,0.665,0,0,0-.036.674,0.64,0.64,0,0,0,.567.348h1.349a11.077,11.077,0,0,0,6.78,8.238l-0.249.312a0.664,0.664,0,0,0-.038.774l1.981,3.058a0.628,0.628,0,0,0,1.071,0l1.981-3.058a0.663,0.663,0,0,0-.038-0.774l-0.248-.312a11.075,11.075,0,0,0,6.779-8.238h1.35a0.64,0.64,0,0,0,.567-0.348A0.667,0.667,0,0,0,970.89,988.3ZM960,973.034a1.679,1.679,0,1,1-1.645,1.679A1.664,1.664,0,0,1,960,973.034Z"
+                      transform="translate(-922 -949)"/>
+            </svg>
+        </a>
+    </section>
+
+    <section id="blog">
+        <div class="container text-center">
+            <h2>Our Blog</h2>
+            <p>Suspendisse sed eros mollis, tincidunt felis eget, interdum eratullam sit amet odio.</p>
+            <div class="hr"></div>
+        </div>
+        <div class="row m-0">
+
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-6 p-0">
+                        <img src="<?php echo $this->getViewFileUrl('Daymonmoss_Landing::img/bl1.jpg'); ?>">
+                    </div>
+                    <div class="col-6 or">
+                        <pre>art/tshirt</pre>
+                        <h4>T-Shirt design</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the indu Stry's standard dummy text ever since the 1500s, an unknown printer took a
+                            galley of type a scrambled it to make a type specimen book.</p>
+                        <a href="#">Read More &raquo;</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-6 p-0">
+                        <img src="<?php echo $this->getViewFileUrl('Daymonmoss_Landing::img/bl2.jpg'); ?>">
+                    </div>
+                    <div class="col-6 or">
+                        <pre>art/tshirt</pre>
+                        <h4>T-Shirt design</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the indu Stry's standard dummy text ever since the 1500s, an unknown printer took a
+                            galley of type a scrambled it to make a type specimen book.</p>
+                        <a href="#">Read More &raquo;</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-6 or">
+                        <pre>art/tshirt</pre>
+                        <h4>T-Shirt design</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the indu Stry's standard dummy text ever since the 1500s, an unknown printer took a
+                            galley of type a scrambled it to make a type specimen book.</p>
+                        <a href="#">Read More &raquo;</a>
+                    </div>
+                    <div class="col-6 p-0">
+                        <img src="<?php echo $this->getViewFileUrl('Daymonmoss_Landing::img/bl3.jpg'); ?>">
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-6 or">
+                        <pre>art/tshirt</pre>
+                        <h4>T-Shirt design</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the indu Stry's standard dummy text ever since the 1500s, an unknown printer took a
+                            galley of type a scrambled it to make a type specimen book.</p>
+                        <a href="#">Read More &raquo;</a>
+                    </div>
+                    <div class="col-6 p-0">
+                        <img src="<?php echo $this->getViewFileUrl('Daymonmoss_Landing::img/bl4.jpg'); ?>">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="stats">
+            <div class="container">
+                <ul class="row">
+                    <li class="ms-0"><img
+                            src="<?php echo $this->getViewFileUrl('Daymonmoss_Landing::img/icons/sti1.png'); ?>"><b>3891</b>User
+                        Favourites
+                    </li>
+                    <li><img src="<?php echo $this->getViewFileUrl('Daymonmoss_Landing::img/icons/sti2.png'); ?>"><b>281K</b>Posts
+                        Last 24 hours
+                    </li>
+                    <li><img
+                            src="<?php echo $this->getViewFileUrl('Daymonmoss_Landing::img/icons/sti3.png'); ?>"><b>618</b>Total
+                        Posts
+                    </li>
+                    <li><img
+                            src="<?php echo $this->getViewFileUrl('Daymonmoss_Landing::img/icons/sti4.png'); ?>"><b>178</b>Campaigns
+                    </li>
+                    <li class="me-0"><img
+                            src="<?php echo $this->getViewFileUrl('Daymonmoss_Landing::img/icons/sti5.svg'); ?>"><b>285</b>Amazing
+                        Features
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="price" class="container text-center">
+
+        <h2>Our Pricing</h2>
+        <p>A 30 days free trial for all. A brief story about how this process works, keep an eye till the end.</p>
+        <div class="hr"></div>
+        <ul class="row list-unstyled">
+            <li class="col-4">
+                <h5>Starter
+                    <span>
+                        <b>$19</b>
+                        <small>per month</small>
+                    </span>
+                </h5>
+
+                <div>
+
+                    <ul class="list-unstyled">
+                        <li>Competition Analysis Methods</li>
+                        <li>All Ranked URLs</li>
+                        <li>International Support System</li>
+                        <li>Social Media Tracking</li>
+                    </ul>
+                    <div>
+                        <a type="button" href="#">Choose plan</a>
+                    </div>
+                </div>
+            </li>
+            <li class="col-4">
+                <h5>Premium
+                    <span>
+                        <b>$39</b>
+                        <small>per month</small>
+                    </span>
+                </h5>
+                <div>
+                    <ul class="list-unstyled">
+                        <li>Competition Analysis Methods</li>
+                        <li>All Ranked URLs</li>
+                        <li>International Support System</li>
+                        <li>Social Media Tracking</li>
+                    </ul>
+                    <div>
+                        <a type="button" href="#">Choose plan</a>
+                    </div>
+                </div>
+            </li>
+            <li class="col-4">
+                <h5>Business
+                    <span>
+                        <b>$99</b>
+                        <small>per month</small>
+                    </span>
+                </h5>
+                <div>
+                    <ul class="list-unstyled">
+                        <li>Competition Analysis Methods</li>
+                        <li>All Ranked URLs</li>
+                        <li>International Support System</li>
+                        <li>Social Media Tracking</li>
+                    </ul>
+                    <div>
+                        <a type="button" href="#">Choose plan</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <section id="team">
+        <div class="container">
+            <h2>Our Team</h2>
+            <p>Meet the craziest team. Share your thoughts with them.</p>
+            <div class="hr"></div>
+            <div class="tm-wrap">
+                <i class="tm1"><span></span></i>
+                <i class="tm2"><span></span>
+                    <div><h6>Kazi Erfan</h6>
+                        <p>UI/UX Designer</p></div>
+                </i>
+                <i class="tm3"><span></span></i>
+                <i class="tm4"><span></span></i>
+                <i class="tm5"><span></span></i>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container">
+            <h2>Keep in touch</h2>
+            <p>Nullam sit amet odio eu est aliquet euismod a a urna. Proin eu urna suscipit, dictum quam nec. </p>
+            <div class="hr"></div>
+            <div class="row">
+                <address class="col-5">
+                    <h6>Our address</h6>
+                    <p>House #13, Streat road, Sydney<br>2310 Australia</p>
+                    <h6>Call us</h6>
+                    <p>+ 880 168 109 1425</p>
+                    <p>+ 021 680 9142</p>
+                    <h6>Email us</h6>
+                    <p>contactus@email.com</p>
+                </address>
+                <form class="col-7" method="post">
+                    <fieldset>
+                        <label for="name">Name</label>
+                        <input class="form-control" type="text" id="name" name="name" required/>
+                        <label for="email">Email</label>
+                        <input class="form-control" type="email" id="email" name="email" required/>
+                        <label for="subject">Subject</label>
+                        <input class="form-control" id="subject" name="subject" required/>
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" rows="4" name="message" required></textarea>
+                        <button type="submit" class="text-uppercase">Send Message</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <?= $this->getChildHtml('konsol.landing.form') ?>
+    </section>
+</main>
+<footer>
+    <div class="container">
+        <a href="https://facebook.com" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="9.969" height="20" viewBox="0 0 9.969 20">
+                <path id="facebook" fill="#999" fill-rule="evenodd"
+                      d="M382.806,5444.32h2.151V5441H382.2v0.01c-3.651.13-4.635,2.19-4.7,4.36H377.5v2.29h-2.487v3.32H377.5v10.01h4.137v-10.01h2.513l0.6-3.32h-3.117v-2.05A1.2,1.2,0,0,1,382.806,5444.32Z"
+                      transform="translate(-375 -5441)"/>
+            </svg>
+        </a>
+        <a href="https://twitter.com" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 310">
+                <path id="twitter" fill="#999" fill-rule="evenodd" d="M302.973,57.388c-4.87,2.16-9.877,3.983-14.993,5.463c6.057-6.85,10.675-14.91,13.494-23.73
+		     c0.632-1.977-0.023-4.141-1.648-5.434c-1.623-1.294-3.878-1.449-5.665-0.39c-10.865,6.444-22.587,11.075-34.878,13.783
+		     c-12.381-12.098-29.197-18.983-46.581-18.983c-36.695,0-66.549,29.853-66.549,66.547c0,2.89,0.183,5.764,0.545,8.598
+		     C101.163,99.244,58.83,76.863,29.76,41.204c-1.036-1.271-2.632-1.956-4.266-1.825c-1.635,0.128-3.104,1.05-3.93,2.467
+		     c-5.896,10.117-9.013,21.688-9.013,33.461c0,16.035,5.725,31.249,15.838,43.137c-3.075-1.065-6.059-2.396-8.907-3.977
+		     c-1.529-0.851-3.395-0.838-4.914,0.033c-1.52,0.871-2.473,2.473-2.513,4.224c-0.007,0.295-0.007,0.59-0.007,0.889
+		     c0,23.935,12.882,45.484,32.577,57.229c-1.692-0.169-3.383-0.414-5.063-0.735c-1.732-0.331-3.513,0.276-4.681,1.597
+		     c-1.17,1.32-1.557,3.16-1.018,4.84c7.29,22.76,26.059,39.501,48.749,44.605c-18.819,11.787-40.34,17.961-62.932,17.961
+		     c-4.714,0-9.455-0.277-14.095-0.826c-2.305-0.274-4.509,1.087-5.294,3.279c-0.785,2.193,0.047,4.638,2.008,5.895
+		     c29.023,18.609,62.582,28.445,97.047,28.445c67.754,0,110.139-31.95,133.764-58.753c29.46-33.421,46.356-77.658,46.356-121.367
+		     c0-1.826-0.028-3.67-0.084-5.508c11.623-8.757,21.63-19.355,29.773-31.536c1.237-1.85,1.103-4.295-0.33-5.998
+		     C307.394,57.037,305.009,56.486,302.973,57.388z"/>
+            </svg>
+        </a>
+        <a href="/feed.xml" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="19.874" height="19.97" viewBox="0 0 19.874 19.97">
+                <path id="rss" fill="#999" fill-rule="evenodd"
+                      d="M453.338,5455.18a2.89,2.89,0,1,0,2.9,2.89A2.9,2.9,0,0,0,453.338,5455.18Zm-2.747-7.49c-0.05,0-.1.01-0.153,0.01v3.69a0.792,0.792,0,0,1,.153-0.01,9.493,9.493,0,0,1,9.384,9.38c0,0.08-.01.15-0.012,0.23h3.7c0-.08.013-0.15,0.013-0.23A13.2,13.2,0,0,0,450.591,5447.69Zm0-6.67c-0.05,0-.1.01-0.153,0.01v3.72c0.051,0,.1-0.01.153-0.01a16.133,16.133,0,0,1,16.067,16.02c0,0.08,0,.15-0.006.23H470.3c0-.08.006-0.15,0.006-0.23A19.816,19.816,0,0,0,450.591,5441.02Z"
+                      transform="translate(-450.438 -5441.03)"/>
+            </svg>
+        </a>
+        <a href="https://habr.com/ru/post/443728/" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="19.937" height="17.5" viewBox="0 0 19.937 17.5">
+                <path id="google_plus" fill="#999" fill-rule="evenodd"
+                      d="M499.976,5452.03a3.731,3.731,0,0,1-1.482-1.77c0-.6.172-0.9,1.081-1.61a3.487,3.487,0,0,0,1.487-2.83c0-1.43-.527-3.15-1.712-3.15h1.786l1.261-.83h-5.633c-2.526,0-4.9,1.76-4.9,3.98a4.013,4.013,0,0,0,4.29,4.03c0.178,0,.352-0.05.523-0.06a2.214,2.214,0,0,0-.287,1.04,2.184,2.184,0,0,0,.767,1.55h-0.977c-3.127,0-5.975,1.69-5.975,3.77,0,2.04,3.08,3.19,6.208,3.19,3.565,0,5.406-1.59,5.406-3.64A3.819,3.819,0,0,0,499.976,5452.03Zm-3.008-2.84c-1.453-.04-2.831-1.63-3.081-3.55s0.722-3.38,2.172-3.33,2.831,1.58,3.082,3.49S498.418,5449.23,496.968,5449.19Zm-0.569,9.24c-2.161,0-3.723-.93-3.723-2.58,0-1.62,1.936-2.97,4.1-2.94a4.493,4.493,0,0,1,1.4.22c1.174,0.82,1.809,1.29,2.046,2.22a2.543,2.543,0,0,1,.069.58C500.291,5457.59,499.439,5458.43,496.4,5458.43Zm11.244-15.8v2.54h2.482v1.68h-2.482v2.5h-1.658v-2.5H503.5v-1.68h2.483v-2.54h1.658Z"
+                      transform="translate(-490.188 -5441.84)"/>
+            </svg>
+        </a>
+        <a href="https://linkedin.com" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20.219" height="18.57" viewBox="0 0 20.219 18.57">
+                <path id="linkedin" fill="#999" fill-rule="evenodd"
+                      d="M526.715,5460.16h4.14v-12.49h-4.14v12.49Zm14.747-12.91a4.607,4.607,0,0,0-4.017,2.13v-1.71H533.33v12.49h4.141v-6.77c0-1.43.722-2.82,2.357-2.82a2.683,2.683,0,0,1,2.631,2.79v6.8H546.6v-7.08C546.6,5448.16,543.271,5447.25,541.462,5447.25Zm-12.659-5.66a2.211,2.211,0,1,0,2.434,2.2A2.33,2.33,0,0,0,528.8,5441.59Z"
+                      transform="translate(-526.375 -5441.59)"/>
+            </svg>
+        </a>
+        <a href="skype:mosoronchan?call" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="19.906" height="20" viewBox="0 0 19.906 20">
+                <path id="skype" fill="#999" fill-rule="evenodd"
+                      d="M584.939,5452.35a9.062,9.062,0,0,0,.11-1.33,8.7,8.7,0,0,0-8.869-8.68,9.876,9.876,0,0,0-1.343.11,5.246,5.246,0,0,0-3.284-1.45,5.079,5.079,0,0,0-4.038,8.13,8.978,8.978,0,0,0-.2,1.89,9.09,9.09,0,0,0,8.869,9.14,9.242,9.242,0,0,0,1.836-.19,4.838,4.838,0,0,0,3.318,1.02A5.083,5.083,0,0,0,584.939,5452.35Zm-4.62,2.76a3.479,3.479,0,0,1-1.534,1.17,6.209,6.209,0,0,1-2.393.42,5.711,5.711,0,0,1-2.739-.58,3.5,3.5,0,0,1-1.242-1.11,2.371,2.371,0,0,1-.478-1.35,0.848,0.848,0,0,1,.287-0.65,0.987,0.987,0,0,1,.73-0.28,0.91,0.91,0,0,1,.608.21,1.7,1.7,0,0,1,.424.63,4.082,4.082,0,0,0,.463.83,1.942,1.942,0,0,0,.7.55,3.39,3.39,0,0,0,2.827-.22,1.285,1.285,0,0,0,.631-1.09,1.085,1.085,0,0,0-.34-0.83,2.135,2.135,0,0,0-.88-0.49,12.4,12.4,0,0,0-1.442-.36,11.917,11.917,0,0,1-2.022-.61,3.336,3.336,0,0,1-1.293-.96,2.33,2.33,0,0,1-.478-1.5,2.458,2.458,0,0,1,.5-1.52,3.2,3.2,0,0,1,1.461-1.02,6.38,6.38,0,0,1,2.248-.35,5.931,5.931,0,0,1,1.786.23,3.941,3.941,0,0,1,1.249.63,2.72,2.72,0,0,1,.727.82,1.8,1.8,0,0,1,.23.84,0.965,0.965,0,0,1-.287.68,0.947,0.947,0,0,1-.715.3,0.867,0.867,0,0,1-.593-0.18,2.475,2.475,0,0,1-.439-0.59,2.741,2.741,0,0,0-.735-0.92,2.279,2.279,0,0,0-1.377-.32,2.516,2.516,0,0,0-1.418.35,1.023,1.023,0,0,0-.539.86,0.829,0.829,0,0,0,.184.54,1.394,1.394,0,0,0,.5.38,3.358,3.358,0,0,0,.649.26q0.329,0.09,1.087.27c0.631,0.13,1.2.29,1.716,0.45a5.442,5.442,0,0,1,1.308.6,2.487,2.487,0,0,1,.841.89,2.686,2.686,0,0,1,.3,1.33A2.9,2.9,0,0,1,580.319,5455.11Z"
+                      transform="translate(-566.5 -5441)"/>
+            </svg>
+        </a>
+        <a href="https://vimeo.com" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="19.907" height="17.47" viewBox="0 0 19.907 17.47">
+                <path id="vimeo" fill="#999" fill-rule="evenodd"
+                      d="M606.287,5447.48c1.75-1.37,4.241-3.98,6.182-3.98s2.415,1.84,2.682,3.89,1.027,6.51,2.054,6.51,3.367-3.95,3.234-5.48-1.826-1.3-2.758-.86c0.855-3.06,2.835-4.87,5.363-4.87s3.138,1.95,3.138,4.1c0,3.29-6.771,13.36-10.859,13.36-2.531,0-3.159-3.67-3.671-5.48s-1.521-6.58-2.7-6.88a4.567,4.567,0,0,0-1.75.93Z"
+                      transform="translate(-606.281 -5442.69)"/>
+            </svg>
+        </a>
+        <a href="https://tumblr.com" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11.625" height="20" viewBox="0 0 11.625 20">
+                <path id="tumblr" fill="#999" fill-rule="evenodd"
+                      d="M658.661,5457.71a2.518,2.518,0,0,1-2.63-2.36v-5.99h4.138v-3.37h-4.138V5441h-2.893a5.029,5.029,0,0,1-3.751,5.14v3.18h2.491v7.14a4.838,4.838,0,0,0,5.04,4.53,6.626,6.626,0,0,0,4.089-1.11v-3.27A2.672,2.672,0,0,1,658.661,5457.71Z"
+                      transform="translate(-649.375 -5441)"/>
+            </svg>
+        </a>
+        <a id="return" href="#home">
+            <svg xmlns="http://www.w3.org/2000/svg" width="54" height="54">
+                <circle id="circle" r="27" cy="27" cx="27" fill="#fff"/>
+                <path id="up-arrow" fill="#999" fill-rule="evenodd"
+                      d="m27.16511,23.26473l5.50384,5.11581c0.38041,0.35359 0.38041,0.92536 0,1.27519l-0.91461,0.85013c-0.38041,0.35359 -0.99555,0.35359 -1.37191,0l-3.9053,-3.62245l-3.90125,3.62621c-0.38041,0.35359 -0.99555,0.35359 -1.37191,0l-0.91866,-0.85013c-0.38041,-0.35359 -0.38041,-0.92536 0,-1.27519l5.50384,-5.11581c0.38041,-0.35735 0.99555,-0.35735 1.37596,-0.00376z"/>
+            </svg>
+        </a>
+        <span>Dmytro Mosoronchan &copy; All Rights Reserved</span>
+    </div>
+</footer>
+

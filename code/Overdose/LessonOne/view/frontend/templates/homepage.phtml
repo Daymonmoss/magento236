@@ -1,0 +1,12 @@
+<?php /** @var \Overdose\LessonOne\ViewModel\OneOne $viewModel */ ?>
+
+<?php /** @var \Overdose\LessonOne\Block\Overdose $block */ ?>
+
+<?php $viewModel = $this->getData('view_model'); ?>
+
+<?= $viewModel->iAmViewModel()  . "<br/>" ?>
+
+<?php $friendId = 3 ?>
+
+<span><?= $viewModel->getFriendName($friendId) ?></span><br/>
+<?php // echo $viewModel->getFriendModel($friendId)->getData('wowowowow') ?><br/>

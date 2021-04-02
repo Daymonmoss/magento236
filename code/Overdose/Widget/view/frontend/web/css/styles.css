@@ -1,0 +1,3 @@
+#element>div:nth-child(odd){
+    cursor:pointer;
+}

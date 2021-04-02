@@ -1,0 +1,20 @@
+<?php
+/**
+ * @var Overblock $block,
+ **/
+use Overdose\CustomShipping\Block\Overblock;
+
+$viewModel = $this->getData('index.newview');
+?>
+
+   <h1>This is CustomShipping Overdose Module!</h1>
+
+
+   <img src="<?php echo $this->getViewFileUrl('Overdose_CustomShipping::img/custom-shipping-frontend.png'); ?>" /><br><br><br>
+
+   <?php
+   echo $block->showBlock() . "<br>";
+   echo $viewModel->fromViewModel() . "<br><br><br>";
+   ?>
+
+   <img src="<?php echo $this->getViewFileUrl('Overdose_CustomShipping::img/custom-shipping-adminhtml.png'); ?>" />

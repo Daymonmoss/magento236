@@ -1,0 +1,24 @@
+{
+    "name": "Overdose/Plug",
+    "description": "Overdose Plug Module for learning",
+    "license": [
+        "SelfMade Corp."
+    ],
+    "type": "magento2-module",
+    "version": "0.0.1",
+    "authors": [
+        {
+            "name": "Dmitr Mos",
+            "email": "daymonmoss@gmail.com",
+            "homepage": "https://daymonmoss.github.io/",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "files": [ "registration.php" ],
+        "psr-4": {
+            "Overdose\\Plug\\": ""
+        }
+    }
+}
+

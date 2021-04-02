@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <remove src="css/styles-m.css" />
+        <remove src="css/styles-l.css" />
+        <remove src="css/print.css" />
+        <remove src="css/styles.css" />
+        <remove src="my-js.js"/>
+        <remove src="Magento_Catalog::js/compare.js" />
+        <meta name="charset" content="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link src="Daymonmoss_Landing::favicon.ico" rel="favicon" />
+        <css src="Daymonmoss_Landing::css/bootstrap.min.css" />
+        <css src="Daymonmoss_Landing::css/styles.css" />
+        <script src="Daymonmoss_Landing::js/scripts.js"/>
+    </head>
+    <body>
+        <referenceBlock name="catalog.compare.sidebar" remove="true"/>
+        <referenceBlock name="wishlist_sidebar" remove="true" />
+        <referenceBlock name="navigation.sections" remove="true" />
+        <referenceBlock name="copyright" remove="true"/>
+        <referenceBlock name="authentication-popup" remove="true"/>
+        <referenceContainer name="main.content" htmlTag="main" htmlClass="page-main-full-width" />
+        <referenceContainer name="head.container" remove="true"/>
+        <referenceContainer name="header.container" remove="true"/>
+        <referenceContainer name="header" remove="true"/>
+        <referenceContainer name="menu" remove="true"/>
+        <referenceContainer name="notifications" remove="true"/>
+        <referenceContainer name="footer" remove="true" />
+        <referenceContainer name="content">
+            <block
+                   name="konsol.landing"
+                   template="Daymonmoss_Landing::index.phtml" >
+            </block>
+        </referenceContainer>
+        <container name="konsol_form" htmlTag="div" htmlClass="form">
+            <block
+                class="Magento\Framework\View\Element\Template"
+                name="konsol.landing.form"
+                template="Daymonmoss_Landing::form.phtml" >
+            </block>
+        </container>
+    </body>
+</page>

@@ -1,0 +1,43 @@
+<svg width="142.5" height="55" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <style>.cls-1 {
+        fill: #f4f5f9;
+      }
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #f4f5f9;
+        stroke-width: 3px;
+      }
+
+      .cls-3, .cls-4 {
+        font-size: 41.538px;
+        font-family: OpenSans;
+      }
+
+      .cls-3 {
+        fill: #4a4c55;
+        font-weight: 700;
+      }
+
+      .cls-4 {
+        fill: #fff;
+        font-weight: 300;
+      }</style>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="602" width="802" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path id="svg_1" d="m0,1.5l51.676,0l0,52l-51.676,0l0,-52z" class="cls-1"/>
+  <path stroke="null" d="m2.25031,1.5l138.74969,0l0,52l-138.74969,0l0,-52z" class="cls-2" id="Rectangle_1_copy"/>
+  <text transform="translate(14.348999977111816,41.66699981689453) scale(0.8610000014305115,0.8669999837875366) " class="cls-3" id="B">B</text>
+  <text transform="translate(61.71500015258789,41.099998474121094) scale(0.8610000014305115,0.8669999837875366) " class="cls-4" id="INO">INO</text>
+ </g>
+</svg>

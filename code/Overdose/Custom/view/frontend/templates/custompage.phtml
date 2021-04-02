@@ -1,0 +1,18 @@
+<?php
+/**
+ * @var Overblock $block,
+ **/
+use Overdose\Custom\Block\Overblock;
+
+$viewModel = $this->getData('index.newview');
+?>
+
+   <h1>This is Custom Overdose Module!</h1><br>
+   <a type="button" id="sign-in" href="custom/customer/login">Please, Sign In!!!</a><br>
+
+
+   <?php
+   echo $block->showBlock() . "<br>";
+   echo $viewModel->fromViewModel();
+   ?>
+

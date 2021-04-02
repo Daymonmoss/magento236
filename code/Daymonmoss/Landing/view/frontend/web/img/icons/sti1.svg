@@ -1,0 +1,15 @@
+<svg id="Icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="111" height="111" viewBox="0 0 111 111">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 1px;
+      }
+    </style>
+  </defs>
+  <g id="bg">
+    <circle class="cls-1" cx="55.5" cy="55.5" r="55"/>
+  </g>
+  <image id="sti1" x="40" y="43" width="31" height="26" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAaCAYAAABPY4eKAAABeklEQVRIicVWgW2EMAx0mYARskGzQTPCb1BGYANG+BEY4bsB3aDfCVAnoBu4AtnSfUjSJPrnLVlAsH2249ghZg6xY+aRmRe+pS9m7iI6JqHTM3Pr64SMnD3lSXjxDBrQ6QOAq84Ma+u7TYGPIrhEInRiVGUMOLt+D4EIV5kLyNgQ+ABe71IUcXIOGY1w5zlN6J3++A9YGaNxmToa4AXBNZJYMaUK0xTqaLaMLizCJUZqWYuzb4jIElFLRFc6hhTnrRHgZ1DbPAl4owbScFQGFOe6gv8K24PAX+X5o2n/lOfpAHDF+NDjot1nevAxc9BFb9qrHv7cblXDEzYzNNChVw/gE8yD3WAhAWbpwfd0wMBIdjFwC0KlfT7GLQR1RplUUdzDAQQe/f8xpQ4yULsFmMUx9xoVUp4KR+cA2dtFnAOuhaJpW2QcpuSdJ5/ctppI5oBRCxeS7EyV7uHkOdEH1rKLtKaQ8AZbBar8snlQR4aI3onoexsSpUREfzEAc7Qv8f82AAAAAElFTkSuQmCC"/>
+</svg>

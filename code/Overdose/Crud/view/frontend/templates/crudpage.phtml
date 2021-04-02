@@ -1,0 +1,43 @@
+<?php
+/**
+ * @var Overblock $block
+ * @var Newview $viewModel
+ * $block === $this
+ **/
+use Overdose\Crud\Block\Overblock;
+use Overdose\Crud\ViewModel\Newview;
+
+$viewModel = $this->getData('crud.newview');
+   echo $block->showBlock() . "\n";
+   echo $viewModel->fromViewModel() . "\n";
+   ?>
+   <h1>This is Overdose Crud Module!</h1>
+<table>
+    <thead>
+     <tr>
+         <td>id:</td>
+         <td>name:</td>
+         <td>age:</td>
+         <td>description:</td>
+         <td>updated_at:</td>
+         <td>created_at:</td>
+     </tr>
+    </thead>
+    <tbody>
+    <tr>
+<?php if ($viewModel->getAllStudents() !== null) {
+       foreach ($viewModel->getAllStudents() as $student): ?>
+<tr>
+    <?php foreach ($student->getData() as $key => $value) :  ?>
+    <td><?= $value ?></td>
+    <?php  endforeach; ?>
+</tr>
+  <?php  endforeach; ?>
+<?php
+   } else {
+       echo "Table is empty, yet bro! Check your AddDataToTheTable.php";
+   } ?>
+    </tbody>
+</table>
+
+

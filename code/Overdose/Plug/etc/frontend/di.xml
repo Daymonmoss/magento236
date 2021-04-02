@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Overdose\Plug\ViewModel\Newview">
+        <plugin name="overdose_plug_around" type="Overdose\Plug\Plugin\AroundPlugin" />
+        <plugin name="overdose_plug_after" type="Overdose\Plug\Plugin\AfterPlugin" />
+    </type>
+</config>

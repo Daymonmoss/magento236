@@ -1,0 +1,604 @@
+header>div.container{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    flex-wrap: wrap!important;
+    height:132px;
+}
+
+i{
+    display: inline-block;
+}
+h1, h2{
+    text-transform: uppercase;
+    text-align: center;
+}
+#more{
+    height: 74px;
+    width: 74px;
+    display: block;
+    margin: auto;
+    position: relative;
+    top: -34px;
+    z-index: 2;
+}
+#more:hover #anchor{
+    stroke: #dc4b3c!important;
+    fill: #dc4b3c!important;
+}
+.logo{
+    background-image: url(../../../../../../frontend/Magento/blank/uk_UA/Daymonmoss_Landing/img/icons/lg.svg);
+    background-repeat: no-repeat;
+    margin: auto 0;
+    width: 143px;
+    height: 55px;
+}
+.navbar{
+    margin: 0;
+    padding: 0;
+}
+nav>ul{
+    flex-direction: row!important;
+}
+.nav-link{
+    font-size: 10px;
+    font-weight: 900;
+    color: #fff;
+    padding: 22px 0;
+    text-transform: uppercase;
+}
+.nav-item{
+    margin: auto 29px;
+}
+.nav-item:last-child{
+     margin-right: 0!important;
+}
+.nav-link.active, .nav-link:hover{
+    color:#dc4b3c;
+    border-bottom: 1px solid #dc4b3c;
+}
+.prev-icon, .next-icon{
+    width: 45px;
+    height: 45px;
+}
+.prev-icon:hover #left-arrow, .next-icon:hover #right-arrow{
+    fill: #fff;
+    fill-opacity: 0.75;
+}
+.prev-icon:hover #left-rect, .next-icon:hover #right-rect{
+    fill: #dc4b3c;
+    fill-opacity: 0.75;
+}
+.carousel-item .container{
+    position: absolute;
+    top: 25%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color:#fff;
+}
+.carousel-item h3{
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+.carousel-item h1, .carousel-item h2{
+    text-transform: uppercase;
+    font-size: 55px;
+    font-weight: 700;
+    letter-spacing: 20px;
+    word-spacing: 40px;
+}
+.carousel-item p{
+    padding: 0 22%;
+    margin-bottom: 70px;
+}
+.hr{
+    background-image: url(../../../../../../frontend/Magento/blank/uk_UA/Daymonmoss_Landing/img/icons/hr.svg);
+    background-repeat: no-repeat;
+    width: 196px;
+    height: 7px;
+    margin: 50px auto;
+}
+.carousel-item .container .h1 .h2 div {
+    margin-bottom: 50px;
+}
+.or{
+    background: #dc4b3c;
+    color: #fff;
+}
+#blog>div.row>div:nth-child(1)>div>div.or:before, #blog>div.row>div:nth-child(2)>div>div.or:before{
+    content: "";
+    position: relative;
+    top: calc(50% - 34px);
+    left: -78.2px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 34px 28px 34px 0;
+    border-color: transparent #dc4b3c transparent transparent;
+    line-height: 0;
+    _border-color: #000000 #dc4b3c #000000 #000000;
+    _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+    display: inline-block;
+}
+#blog>div.row>div:nth-child(3)>div>div.or:before, #blog>div.row>div:nth-child(4)>div>div.or:before{
+    content: "";
+    position: relative;
+    bottom: 25%;
+    top:45%;
+    left: 119.5%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 34px 0 34px 28px;
+    border-color: transparent transparent transparent #dc4b3c ;
+    line-height: 0;
+    _border-color: #000000 #000000 #000000 #dc4b3c;
+    _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+    display: inline-block;
+}
+.or>a{
+    color: #fff;
+    text-decoration: none;
+}
+.or>a:hover{
+    text-decoration: underline;
+}
+h4{
+    text-transform: uppercase;
+    margin-bottom: 48px;
+}
+pre{
+    margin-bottom: 32px;
+}
+.stats{
+    background-image: url(../../../../../../frontend/Magento/blank/uk_UA/Daymonmoss_Landing/img/stb.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    max-width: 100%;
+    height: auto
+}
+.stats>div>ul{
+    flex-direction: row;
+    padding: 0;
+    min-height: 511px;
+}
+.stats>div>ul>li{
+     padding: 0;
+     flex-direction: column;
+     display: inline-flex;
+     text-align: center;
+     color: #fff;
+     max-width: 110px;
+     margin: auto;
+     font-size: 12px;
+}
+.stats>div>ul>li>b{
+    padding: 50px 0 16px 0;
+    font-size: 20px;
+    font-weight:900;
+}
+#price {
+    padding-top: 155px;
+}
+#price h2, #blog>div>h2, #contact>div>h2, #message>h6{
+    color: #6a6a6a;
+    font-weight: bolder;
+    font-size: 28px;
+}
+#price>p, #blog>div>p{
+    color: #6a6a6a;
+}
+#price h5{
+    text-transform: uppercase;
+    height: 204px;
+    font-size: 18px;
+    line-height: 204px;
+    background: #999;
+    color: #fff;
+    margin-bottom: 0;
+    position: relative;
+}
+#price>ul>li>div{
+    background-color: #f4f5f9;
+}
+#price>ul>li:hover h5, #price div>a:hover{
+    background: #dc4b3c;
+}
+#price div>a{
+    text-decoration: none;
+    color: #fff;
+    background: #999;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 18px 32px;
+    margin-bottom: 45px;
+}
+#price div>ul{
+    padding-top: 115px;
+    padding-bottom: 40px;
+    font-size: 12px;
+    color: #999;
+    line-height: 3;
+}
+#price span:before{
+    content: "";
+    height: 176px;
+    width: 176px;
+    background: rgba(255,255,255, 0.25);
+    border-radius: 50%;
+    z-index: 1;
+    position: absolute;
+    left: -12px;
+    top: -12px;
+}
+#price span{
+    display: inline-flex;
+    flex-direction: column;
+    position: absolute;
+    height: 152px;
+    width: 152px;
+    border-radius: 50%;
+    background: #fff;
+    left: calc(100% / 3);
+    right: 0;
+    bottom: -76px;
+    line-height: 1;
+    color: #999;
+    z-index: 2;
+}
+#price span>b{
+    font-size: 28px;
+    font-weight: 900;
+    margin-top: auto;
+}
+#price span>small{
+    text-transform: none;
+    font-size: 10px;
+    margin-bottom: auto;
+}
+#team{
+    background-image: url(../../../../../../frontend/Magento/blank/uk_UA/Daymonmoss_Landing/img/tbr.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 744px;
+    color: #fff;
+    padding-top: 150px;
+}
+#team h2{
+    margin-bottom: 0;
+    font-size: 28px;
+}
+#team>div>p{
+    padding: 28px 0 5px 0;
+    text-align: center;
+}
+#team i{
+    display:block;
+    width: 57px;
+    height: 57px;
+    position: relative;
+    margin: auto;
+    cursor: pointer;
+}
+#team i>span{
+    display: block;
+    width: 100%;
+    height:100%;
+    position: absolute;
+    border: 2px solid transparent;
+}
+#team i:hover{
+    transform: scale(1.7);
+    transition: 1s;
+}
+
+#team i>span:hover, #team i:hover #team i>span{
+    background: #dc4b3c;
+    opacity: 0.4;
+    border-radius: 50%;
+}
+.tm1{
+    background-image: url(../../../../../../frontend/Magento/blank/uk_UA/Daymonmoss_Landing/img/icons/tm1.png);
+    background-repeat: no-repeat;
+    margin-left:0!important;
+    margin-bottom:0!important;
+}
+.tm2{
+    background: url(../../../../../../frontend/Magento/blank/uk_UA/Daymonmoss_Landing/img/icons/tm2.png) no-repeat;
+    margin-top: 45px!important;
+}
+.tm3{
+    background: url(../../../../../../frontend/Magento/blank/uk_UA/Daymonmoss_Landing/img/icons/tm3.png) no-repeat;
+    margin-top: 35px!important;
+}
+.tm4{
+    background: url(../../../../../../frontend/Magento/blank/uk_UA/Daymonmoss_Landing/img/icons/tm4.png) no-repeat;
+    margin-bottom: 35px!important;
+}
+.tm5{
+    background: url(../../../../../../frontend/Magento/blank/uk_UA/Daymonmoss_Landing/img/icons/tm5.png) no-repeat;
+    margin-right:0!important;
+    margin-top: 0!important;
+}
+.tm-wrap{
+    display:flex;
+    height:165px;
+}
+
+#team i>div{
+display: none;
+position: absolute;
+width: max-content;
+top: 100px;
+line-height: 1;
+font-size: 8px;
+text-align: center;
+}
+
+#team i>div>h6{
+color: #dc4b3c;
+font-size: 12px;
+padding-bottom:14px;
+margin-bottom: 0;
+}
+
+#team i>div::before{
+    content: "";
+    flex: 1 1 auto;
+    border-bottom: 5px solid #d5d6d6;
+    display:block;
+    background: #ccc8c8;
+    width: 1px;
+    height: 30px;
+    position: absolute;
+    top: -88%;
+    left: 40%;
+}
+
+#team i:hover div{
+    display:block;
+}
+
+#contact{
+    padding-top:260px;
+    padding-bottom: 145px;
+    background-color: #f4f5f9;
+    color: #6a6a6a;
+}
+#contact>div>p{
+    text-align: center;
+}
+#contact>.container>.row{
+    flex-wrap: nowrap;
+    max-height: 570px;
+}
+address, form{
+    background-color: #fff;
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(153,153,153,0.5);
+    -moz-box-shadow: 0px 3px 5px 0px rgba(153,153,153,0.5);
+    box-shadow: 0px 3px 5px 0px rgba(153,153,153,0.5);
+
+}
+address{
+    margin: 0 15px 0 0;
+    padding: 100px!important;
+}
+form{
+    margin-left:15px;
+    padding: 95px!important;
+}
+label, input{
+    display: block;
+    font-size: 14px;
+}
+label{
+    font-weight: 500;
+}
+input{
+    margin-bottom: 24px;
+    height: 20px;
+}
+input, textarea{
+    width:100%!important;
+    padding: 0 12px!important;
+    border: none!important;
+    border-bottom: 2px solid #e5e5e5!important;
+    max-height: 100px!important;
+}
+input:focus, textarea:focus{
+    border-bottom: 2px solid #dc4b3c!important;
+    outline: none!important;
+    box-shadow: none!important;
+}
+button{
+    padding: 14px 26px;
+    color: #fff;
+    background: #6a6a6a;
+    border:none;
+    font-size: 12px;
+    margin-top:28px;
+}
+
+button:hover {
+    background: #dc4b3c;
+    transition: 0.1s;
+}
+h6{
+    color: #dc4b3c;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 18px;
+    padding-bottom: 24px;
+    margin-bottom: 0;
+}
+address>p{
+    font-size: 16px;
+    margin: 0;
+}
+address>p:nth-child(2), address>p:nth-child(5){
+    padding-bottom: 68px;
+}
+
+footer{
+    background-color: #202020;
+    height: 90px;
+}
+
+footer span{
+    color: #7b7b7b;
+    float: right;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    height: 90px;
+}
+footer svg{
+    width: 20px;
+    height: 20px;
+    margin: auto 0;
+}
+
+footer a:hover #vimeo, footer a:hover #tumblr, footer a:hover #skype, footer a:hover #linkedin, footer a:hover #google_plus, footer a:hover #google_plus, footer a:hover #rss, footer a:hover #twitter, footer a:hover #facebook{
+    stroke: #dc4b3c!important;
+    fill: #dc4b3c!important;
+}
+
+footer a {
+    display: inline-flex;
+    height: 90px;
+    flex-direction: column;
+    margin-right: 15px;
+}
+#return{
+    position:fixed;
+    height: 54px;
+    width: 54px;
+    bottom: 63px;
+    right: 80px;
+}
+#return>svg{
+    height: 54px;
+    width: 54px;
+}
+#return:hover #circle{
+    fill: #dc4b3c!important;
+    transition: 0.5s;
+}
+#return:hover #up-arrow{
+    fill: #fff!important;
+    transition: 0.5s;
+}
+#message{
+    text-align: center;
+}
+#checkmark{
+    height: 200px!important;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+@media(max-width: 1919px){
+   /* img{
+        max-width: 100%!important;
+        height: auto!important;
+    } */
+    #blog > div.row > div:nth-child(1) > div > div.or:before, #blog > div.row > div:nth-child(2) > div > div.or:before{
+        left: -39px;
+    }
+
+    .or {
+        max-height: 480px;
+    }
+}
+@media(min-width: 1920px){
+    .or{
+        padding: 70px 70px 70px 50px;
+    }
+}
+@media(max-width: 1919px) {
+    #blog>div.row>div:nth-child(3)>div>div.or:before, #blog>div.row>div:nth-child(4)>div>div.or:before{
+        left: 102.5%;
+    }
+}
+@media(min-width: 992px) and (max-width: 1199px) {
+    .tm-wrap {
+        height: 250px;
+    }
+    .tm5{
+        top: -150px;
+    }
+    .tm4{
+        top: -90px;
+    }
+    .tm2{
+        top: 30px;
+    }
+}
+@media(min-width: 1441px) and (max-width: 1600px) {
+    .tm-wrap {
+        height: 210px;
+    }
+
+    .tm4 {
+        margin-top: 75px!important;
+    }
+
+    .tm5 {
+        top: -30%;
+    }
+}
+    @media(min-width: 1400px) and (max-width: 1440px) {
+        .tm-wrap {
+            height: 240px;
+        }
+        .tm2{
+            margin-top: 70px!important;
+        }
+        .tm4 {
+            margin-bottom: 9%!important;
+        }
+
+        .tm5 {
+            top: -46%;
+        }
+    }
+        @media(min-width: 1367px) and (max-width: 1399px){
+            .tm-wrap{
+                height: 240px;
+            }
+            .tm1{
+                margin-bottom: 35px!important;
+            }
+            .tm2{
+                margin-top: 55px!important;
+            }
+            .tm4{
+                margin-top: 75px!important;
+            }
+            .tm5{
+                top: -20%;
+            }
+}
+@media(min-width: 1200px) and (max-width: 1366px){
+    .tm-wrap{
+        height: 230px;
+    }
+    .tm2{
+        margin-top: 60px!important;
+    }
+    .tm4{
+        margin-top: 75px!important;
+    }
+    .tm5{
+        top: -50%;
+    }
+}
+@media(max-width: 1199px){
+    #price span {
+        left: calc(100% / 4);
+    }
+}

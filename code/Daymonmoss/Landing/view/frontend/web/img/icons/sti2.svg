@@ -1,0 +1,13 @@
+<svg id="Icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="110" height="110" viewBox="0 0 110 110">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 1px;
+      }
+    </style>
+  </defs>
+  <image id="_" data-name="" x="40.5" y="40.5" width="29" height="29" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAdCAYAAABWk2cPAAAA5klEQVRIib3X7QnCMBAG4Ffwv47gCG6go2QEncBROoI4gSvoBI7gCCcpKY0lH/eR9CClhLs89CAh3RARDHEGcBKWv7cG0AEYNIVaNAavAF7Muuf49O0VDkdzOGHtGL1Bn3Mnor0W1XzhEPIPGtTSUlV7W4FstCXIQluDVbQHWER7gVm0J5hEe4PT+p+1wS8RHRGOqNVAP4fw8jfZE5xQRGdkSzgJxmhrOAsu0VZwEUyhVrgK5lAtzAJLqBRmgzWUC4tADlqDxSAXzcEqUIIu4Ztla4mSI9i0lzX/MhcAOwAPwc1+DgA/WcQCebTrlbIAAAAASUVORK5CYII="/>
+  <circle class="cls-1" cx="55" cy="55" r="55"/>
+</svg>

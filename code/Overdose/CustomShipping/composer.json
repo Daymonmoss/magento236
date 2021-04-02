@@ -1,0 +1,38 @@
+{
+    "name": "Overdose/CustomShipping",
+    "description": "Overdose CustomShipping Module for learning",
+    "description": "Custom shipping module",
+    "require": {
+        "php": "~7.3.0||~7.4.0",
+        "magento/framework": "102.0.*",
+        "magento/module-backend": "101.0.*",
+        "magento/module-catalog": "103.0.*",
+        "magento/module-config": "101.1.*",
+        "magento/module-directory": "100.3.*",
+        "magento/module-quote": "101.1.*",
+        "magento/module-sales": "102.0.*",
+        "magento/module-sales-rule": "101.1.*",
+        "magento/module-shipping": "100.3.*",
+        "magento/module-store": "101.0.*"
+    },
+    "license": [
+        "SelfMade Corp."
+    ],
+    "type": "magento2-module",
+    "version": "0.0.1",
+    "authors": [
+        {
+            "name": "Dmitr Mos",
+            "email": "daymonmoss@gmail.com",
+            "homepage": "https://daymonmoss.github.io/",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "files": [ "registration.php" ],
+        "psr-4": {
+            "Vendor\\Module\\": ""
+        }
+    }
+}
+

@@ -1,0 +1,17 @@
+<?php
+/**
+ * @var Overblock $block,
+ **/
+use Overdose\CustomersLogger\Block\Overblock;
+
+$viewModel = $this->getData('index.newview');
+?>
+
+   <h1>This is CustomersLogger Overdose Module!</h1>
+
+   <?php
+   echo $block->showBlock() . "<br>";
+   echo $viewModel->fromViewModel();
+   ?>
+
+
