@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <remove src="css/styles-m.css" />
+        <remove src="css/styles-l.css" />
+        <remove src="css/print.css" />
+        <remove src="css/styles.css" />
+        <remove src="my-js.js"/>
+        <remove src="Magento_Catalog::js/compare.js" />
+        <remove src="Magento_Blank::favicon.ico"/>
+        <meta name="charset" content="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="apple-touch-icon" sizes="180x180" src="PronkoConsulting_TestCv::img/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" src="PronkoConsulting_TestCv::img/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" src="PronkoConsulting_TestCv::img/favicon-16x16.png" />
+        <link rel="manifest" src="PronkoConsulting_TestCv::img/webmanifest" />
+        <css src="PronkoConsulting_TestCv::css/bootstrap.min.css" />
+        <css src="PronkoConsulting_TestCv::css/styles.css" />
+        <script src="PronkoConsulting_TestCv::js/scripts.js"/>
+    </head>
+    <body>
+        <referenceBlock name="page.main.title">
+            <action method="setPageTitle">
+                <argument translate="true" name="title" xsi:type="string">My CV</argument>
+            </action>
+        </referenceBlock>
+        <referenceBlock name="catalog.compare.sidebar" remove="true"/>
+        <referenceBlock name="wishlist_sidebar" remove="true" />
+        <referenceBlock name="navigation.sections" remove="true" />
+        <referenceBlock name="copyright" remove="true"/>
+        <referenceBlock name="authentication-popup" remove="true"/>
+        <referenceBlock name="contentarea" remove="true"/>
+        <referenceBlock name="page.messages" remove="true"/>
+        <referenceContainer name="main.content" htmlTag="main" htmlClass="page-main-full-width" />
+        <referenceContainer name="head.container" remove="true"/>
+        <referenceContainer name="header.container" remove="true"/>
+        <referenceContainer name="header" remove="true"/>
+        <referenceContainer name="menu" remove="true"/>
+        <referenceContainer name="notifications" remove="true"/>
+        <referenceContainer name="footer" remove="true" />
+        <referenceContainer name="content">
+            <block
+                   name="pronkoconsulting.testcv"
+                   template="PronkoConsulting_TestCv::cv.phtml" >
+            </block>
+        </referenceContainer>
+    </body>
+</page>

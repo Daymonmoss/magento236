@@ -1,0 +1,214 @@
+@font-face {
+    font-family: Mass Effect;
+    src: url('../fonts/masseffect.ttf');
+}
+.main{
+    margin: 0;
+    display: flex;
+    position: absolute;
+    max-width: 8372px;
+    max-height: 4096px;
+    left: -215px;
+    font-family: "Mass Effect";
+}
+a{
+    color: #fff;
+    word-break: break-all;
+}
+header{
+    font-size: 12px;
+    display: block;
+    background: #003d74;
+    color: #fff;
+    width: 250px;
+}
+header.active{
+    left: 0;
+}
+h1{
+    font-size: 18px;
+    font-style: italic
+}
+h2{
+    font-size: 26px;
+}
+h3{
+    background:#002e58;
+}
+address{
+    font-style: normal;
+}
+header>ul{
+    font-size: 10px;
+}
+h1, h2, h3, address, header>ul {
+    padding: 0 20px;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 250px);
+    background: #003d742e;
+}
+section{
+    background: #fff;
+    margin: 16px 0;
+}
+section>hr:first-child{
+    margin-top: 0;
+}
+section>hr:last-child{
+    margin-bottom: 0;
+}
+main>p, main h4, main>section ul{
+    padding: 0 10px;
+}
+main h4, main hб{
+    color: #003d74;
+}
+#sidepanel{
+    position: relative;
+    top: 5px;
+    right: 5px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    padding: 3px;
+    float: right;
+}
+#sidepanel>svg{
+    fill: #003d74;
+}
+button:focus{
+    outline:none;
+}
+#return{
+    position:fixed;
+    height: 54px;
+    width: 54px;
+    bottom: 63px;
+    right: 80px;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 50%;
+    border-color: #003d742e;
+    background: #003d742e;
+}
+#return:hover{
+    background: #003d74!important;
+    transition: 0.5s;
+}
+#return:hover #up-arrow{
+    fill: #fff!important;
+    transition: 0.5s;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.highlight:hover{
+    background: #003d74;
+    color: #fff;
+}
+.w-100{
+    width: 100%;
+}
+.w-35{
+    width: 35%;
+}
+.w-50{
+    width: 50%;
+}
+.w-65{
+    width: 65%;
+}
+.w-50px{
+    width: 50px;
+}
+.w-80px{
+    width: 80px;
+}
+.w-120px{
+    width: 120px;
+}
+.w-200px{
+    width: 200px;
+}
+.container{
+    width: 80%;
+    margin:auto;
+}
+.w-50>div{
+    margin-bottom: 12px;
+}
+ul{
+    list-style-position: inside;
+}
+li{
+    padding-left: 20px;
+}
+li>a{
+    white-space: nowrap;
+}
+@media screen and (max-width: 1000px) {
+    .main{
+        display: block;
+        position: initial;
+        left: initial!important;
+    }
+    header{
+        padding: 20px 0;
+    }
+    header, main{
+        width: 100%;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+    main p{
+        margin: 10px;
+        padding-top: 0;
+    }
+    #sidepanel{
+        display: none;
+    }
+    h2{
+        margin-top:0;
+        padding: 0 20px;
+    }
+    .w-50{
+        width:100%;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    header{
+        text-align: center;
+    }
+    header>ul{
+        list-style: none;
+    }
+    .container{
+        width: 100%;
+    }
+    section>h4, section>div{
+        padding: 0 20px;
+    }
+    .w-35, .w-65{
+        width: 100%;
+    }
+    .hr{
+        display: none;
+    }
+    div{
+        box-sizing: border-box;
+    }
+}
