@@ -2,6 +2,9 @@
     font-family: Mass Effect;
     src: url('../fonts/masseffect.ttf');
 }
+body{
+    margin:0;
+}
 .main{
     margin: 0;
     display: flex;
@@ -161,9 +164,13 @@ li>a{
     }
     header{
         padding: 20px 0;
+        height: 100vh;
     }
     header, main{
         width: 100%;
+    }
+    #sidepanel{
+        display: none;
     }
     .sidebar {
         width: 100%;
@@ -184,7 +191,7 @@ li>a{
         padding: 0 20px;
     }
     .w-50{
-        width:100%;
+        width:100%!important;
     }
 }
 

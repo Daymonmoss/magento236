@@ -1,5 +1,4 @@
 require(['jquery', 'mage/url', 'Konsol_Landing/js/bootstrap.bundle.min'], function ($, urlBuilder, bootstrap) {
-        //$(".loading-mask").loader("hide");
         $("#return").hide();
         $(function () {
             $(window).scroll(function () {
