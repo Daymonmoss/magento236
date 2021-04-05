@@ -32,6 +32,7 @@ require(['jquery', 'jquery/ui'], function ($) {
 
         $('.main').draggable({
             handle: "header",
+            cancel: "address a",
             axis: "x",
             containment: [-215, 0, 0, 0],
             distance: 0,
