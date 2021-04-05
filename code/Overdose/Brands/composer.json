@@ -1,5 +1,5 @@
 {
-    "name": "PronkoConsulting/TestCv",
+    "name": "Overdose/Brands",
     "description": "Test Task on Magento Backend Developer",
     "license": [
         "SelfMade Corp."
@@ -17,7 +17,7 @@
     "autoload": {
         "files": [ "registration.php" ],
         "psr-4": {
-            "PronkoConsulting\\TestCv\\": ""
+            "Overdose\\Brands\\": ""
         }
     }
 }

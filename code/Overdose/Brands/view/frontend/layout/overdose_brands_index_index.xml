@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block class="Overdose\Brands\Block\Overblock"
+                   name="i.am.index.block"
+                   template="Overdose_Brands::brands.phtml" >
+                <arguments>
+                    <argument name="index.newview" xsi:type="object">Overdose\Brands\ViewModel\Newview</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
