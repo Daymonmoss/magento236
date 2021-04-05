@@ -1,22 +1,28 @@
 <?php
-namespace Overdose\Crud\Api;
+namespace Overdose\Brands\Api;
 
 use Magento\Framework\Api\SearchCriteria;
 use Magento\Framework\Api\SearchResultsInterface;
 use Magento\Framework\Exception\CouldNotDeleteException;
-use Overdose\Crud\Api\Data\StudentsInterface;
-use Overdose\Crud\Model\StudentsModel;
+use Overdose\Brands\Api\Data\BrandsInterface;
+use Overdose\Brands\Model\BrandsModel;
 
-interface StudentsRepositoryInterface
+interface BrandsRepositoryInterface
 {
+//    /**
+//     * @param BrandsInterface|BrandsModel $model
+//     * @return BrandsInterface|BrandsModel
+//     */
+//    public function get($model);
+
     /**
-     * @param StudentsInterface|Students $model
-     * @return StudentsInterface|Students
+     * @param BrandsInterface|BrandsModel $model
+     * @return BrandsInterface|BrandsModel
      */
     public function save($model);
 
     /**
-     * @param StudentsInterface|Students $model
+     * @param BrandsInterface|BrandsModel $model
      * @return true
      * @throws CouldNotDeleteException
      */
@@ -24,7 +30,7 @@ interface StudentsRepositoryInterface
 
     /**
      * @param integer $id
-     * @return StudentsInterface|Students
+     * @return BrandsInterface|BrandsModel
      */
     public function getById($id);
 

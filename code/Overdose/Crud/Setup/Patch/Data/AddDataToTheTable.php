@@ -5,8 +5,8 @@ use Magento\Framework\Exception\CouldNotSaveException;
 use Magento\Framework\Message\ManagerInterface;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
-use Overdose\Crud\Model\ResourceModel\Studentsconnection;
-use Overdose\Crud\Model\StudentsFactory;
+use Overdose\Crud\Model\StudentsResource\ResourceModel;
+use Overdose\Crud\Model\StudentsModelFactory;
 
 class AddDataToTheTable implements DataPatchInterface
 {
@@ -21,12 +21,12 @@ class AddDataToTheTable implements DataPatchInterface
     public $e;
 
     /**
-     * @var StudentsFactory
+     * @var StudentsModelFactory
      */
-    protected $model;
+    protected $studentsModelFactory;
 
     /**
-     * @var Studentsconnection
+     * @var ResourceModel
      */
     protected $resourceModel;
 
@@ -39,30 +39,26 @@ class AddDataToTheTable implements DataPatchInterface
      * AddDataToTheTable constructor.
      *
      * @param ModuleDataSetupInterface $moduleDataSetup
-     * @param StudentsFactory $studentsModel
-     * @param Studentsconnection $studentsResourceModel
+     * @param StudentsModelFactory $studentsModelFactory
+     * @param ResourceModel $studentsResourceModel
      */
     public function __construct(
         ModuleDataSetupInterface  $moduleDataSetup,
-        StudentsFactory  $studentsModel,
-        Studentsconnection  $studentsResourceModel
+        StudentsModelFactory  $studentsModelFactory,
+        ResourceModel  $studentsResourceModel
     ) {
         $this->moduleDataSetup = $moduleDataSetup;
-        $this->model = $studentsModel;
+        $this->studentsModelFactory = $studentsModelFactory;
         $this->resourceModel = $studentsResourceModel;
     }
 
-    /**
-     * // TODO:
-     */
+
     public static function getDependencies()
     {
         return[];
     }
 
-    /**
-     * // TODO:
-     */
+
     public function getAliases()
     {
         return[];
@@ -77,7 +73,7 @@ class AddDataToTheTable implements DataPatchInterface
     {
         $this->moduleDataSetup->startSetup();
 
-        $model = $this->model->create();
+        $model = $this->studentsModelFactory->create();
 
         $_data = [
             ['name' => 'Dimon', 'age' => 20, 'description' => 'It is the First student'],

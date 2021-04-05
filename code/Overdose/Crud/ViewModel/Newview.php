@@ -2,47 +2,49 @@
 
 namespace Overdose\Crud\ViewModel;
 
+use Magento\Framework\DataObject;
 use Magento\Framework\View\Element\Block\ArgumentInterface;
-use Overdose\Crud\Model\ResourceModel\Collection\StudentscollectionFactory;
-use Overdose\Crud\Model\ResourceModel\Studentsconnection;
-use Overdose\Crud\Model\Students;
-use Overdose\Crud\Model\StudentsFactory as SomethingDifferent;
+use Overdose\Crud\Model\StudentsResource\StudentsCollection\CollectionFactory;
+use Overdose\Crud\Model\StudentsResource\StudentsCollection\Collection;
+use Overdose\Crud\Model\StudentsResource\ResourceModel;
+use Overdose\Crud\Model\StudentsModel;
+use Overdose\Crud\Model\StudentsModelFactory;
 
 class Newview implements ArgumentInterface
 {
     /**
-     * @var Students
+     * @var StudentsModel
      */
-    private $model = null;
+    private $studentsModel = null;
 
     /**
-     * @var SomethingDifferent
+     * @var StudentsModelFactory
      */
-    protected $studentsFactory;
+    protected $studentsModelFactory;
 
     /**
-     * @var Studentsconnection
+     * @var ResourceModel
      */
     protected $studentsResourceModel;
 
     /**
-     * @var StudentscollectionFactory
+     * @var CollectionFactory
      */
     protected $studentsCollectionFactory;
 
     /**
      * Newview constructor.
-     * @param SomethingDifferent $studentsFactory
-     * @param Studentsconnection $studentsResourceModel
-     * @param StudentscollectionFactory $studentsCollectionFactory
+     * @param StudentsModelFactory $studentsModelFactory
+     * @param ResourceModel $studentsResourceModel
+     * @param CollectionFactory $studentsCollectionFactory
      */
     public function __construct(
-        \Overdose\Crud\Model\StudentsFactory $studentsFactory,
-        Studentsconnection $studentsResourceModel,
-        StudentscollectionFactory $studentsCollectionFactory
+        StudentsModelFactory $studentsModelFactory,
+        ResourceModel $studentsResourceModel,
+        CollectionFactory $studentsCollectionFactory
     ) {
-        $this->studentsFactory = $studentsFactory;
-        $this->studentsFactory = $studentsResourceModel;
+        $this->studentsModelFactory = $studentsModelFactory;
+        $this->studentsResourceModel = $studentsResourceModel;
         $this->studentsCollectionFactory = $studentsCollectionFactory;
     }
     public function fromViewModel(): string
@@ -53,7 +55,7 @@ class Newview implements ArgumentInterface
     /**
      * Get collection of all students from 'overdose_crud'
      *
-     * @return \Magento\Framework\DataObject[]|\Overdose\Crud\Model\ResourceModel\Collection\Studentscollection[]
+     * @return DataObject[]|Collection[]
      */
     public function getAllStudents()
     {
@@ -77,13 +79,13 @@ class Newview implements ArgumentInterface
      * IF not, load from db and then return.
      *
      * @param integer $id
-     * @return Students|null
+     * @return StudentsModel|null
      */
     private function getStudentModel($id)
     {
         if ($this->model === null) {
             // Creates new instance of the 'students object'. A.K.A. individual line/row from mysql table.
-            $model = $this->studentsFactory->create();
+            $model = $this->studentsModelFactory->create();
 
             // Loads the data from the database and puts it to the $model variable.
             $this->studentsResourceModel->load($model, $id);

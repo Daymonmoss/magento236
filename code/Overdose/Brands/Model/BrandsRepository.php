@@ -1,32 +1,33 @@
 <?php
-namespace Overdose\Crud\Model;
+namespace Overdose\Brands\Model;
 
 use Magento\Framework\Api\SearchCriteria\CollectionProcessorInterface;
 use Magento\Framework\Api\SearchResultsInterfaceFactory;
 use Magento\Framework\Exception\CouldNotDeleteException;
 use Magento\Framework\Exception\CouldNotSaveException;
 use Magento\Framework\Exception\NoSuchEntityException;
-use Overdose\Crud\Api\StudentsRepositoryInterface;
-use Overdose\Crud\Model\StudentsModelFactory;
-use Overdose\Crud\Model\StudentsResource\ResourceModel;
-use Overdose\Crud\Model\StudentsResource\StudentsCollection\CollectionFactory;
+use Overdose\Brands\Api\BrandsRepositoryInterface;
+use Overdose\Brands\Model\BrandsModel;
+use Overdose\Brands\Model\BrandsModelFactory;
+use Overdose\Brands\Model\BrandsResource\ResourceModel;
+use Overdose\Brands\Model\BrandsResource\BrandsCollection\CollectionFactory;
 
-class StudentsRepository implements StudentsRepositoryInterface
+class BrandsRepository implements BrandsRepositoryInterface
 {
     /**
-     * @var StudentsModelFactory
+     * @var BrandsModelFactory
      */
-    protected $studentsModelFactory;
+    protected $brandsModelFactory;
 
     /**
      * @var ResourceModel
      */
-    protected $studentsResourceModel;
+    protected $brandsResourceModel;
 
     /**
      * @var CollectionFactory
      */
-    protected $studentsCollectionFactory;
+    protected $brandsCollectionFactory;
 
     /**
      * @var CollectionProcessorInterface
@@ -41,25 +42,40 @@ class StudentsRepository implements StudentsRepositoryInterface
     /**
      * Repository constructor.
      *
-     * @param StudentsModelFactory $studentsModelFactory
-     * @param ResourceModel $studentsResourceModel
-     * @param CollectionFactory $studentsCollectionFactory
+     * @param BrandsModelFactory $brandsModelFactory
+     * @param ResourceModel $brandsResourceModel
+     * @param CollectionFactory $brandsCollectionFactory
      * @param CollectionProcessorInterface $collectionProcessor
      * @param SearchResultsInterfaceFactory $searchResultsFactory
      */
     public function __construct(
-        StudentsModelFactory $studentsModelFactory,
-        ResourceModel $studentsResourceModel,
-        CollectionFactory $studentsCollectionFactory,
+        BrandsModelFactory $brandsModelFactory,
+        ResourceModel $brandsResourceModel,
+        CollectionFactory $brandsCollectionFactory,
         CollectionProcessorInterface $collectionProcessor,
         SearchResultsInterfaceFactory $searchResultsFactory
     ) {
-        $this->studentsFactory = $studentsModelFactory;
-        $this->studentsResourceModel = $studentsResourceModel;
-        $this->studentsCollectionFactory = $studentsCollectionFactory;
+        $this->brandsModelFactory = $brandsModelFactory;
+        $this->brandsResourceModel = $brandsResourceModel;
+        $this->brandsCollectionFactory = $brandsCollectionFactory;
         $this->collectionProcessor = $collectionProcessor;
         $this->searchResultsFactory = $searchResultsFactory;
     }
+
+//    /**
+//     * @inheritDoc
+//     */
+//    public function get($model)
+//    {
+//        try {
+//            $model = $this->brandsModelFactory->create();
+//            $this->brandsResourceModel->load($model);
+//
+//            return $model;
+//        } catch (\Exception $e) {
+//            throw new NoSuchEntityException(__("Sorry. This brand model doesn't exist"));
+//        }
+//    }
 
     /**
      * @inheritDoc
@@ -67,9 +83,9 @@ class StudentsRepository implements StudentsRepositoryInterface
     public function save($model)
     {
         try {
-            return $this->studentsResourceModel->save($model);
+            return $this->brandsResourceModel->save($model);
         } catch (\Exception $e) {
-            throw new CouldNotSaveException(__("Sorry. I cannot save this student =("));
+            throw new CouldNotSaveException(__("Sorry. I cannot save this brand. =("));
         }
     }
 
@@ -79,10 +95,10 @@ class StudentsRepository implements StudentsRepositoryInterface
     public function delete($model)
     {
         try {
-            $this->studentsResourceModel->delete($model);
+            $this->brandsResourceModel->delete($model);
             return true;
         } catch (\Exception $e) {
-            throw new CouldNotDeleteException(__("Sorry. I cannot delete this student. =("));
+            throw new CouldNotDeleteException(__("Sorry. I cannot delete this brand. =("));
         }
     }
 
@@ -92,11 +108,11 @@ class StudentsRepository implements StudentsRepositoryInterface
     public function deleteById($id)
     {
         try {
-            $this->studentsResourceModel->delete($this->getById($id));
+            $this->brandsResourceModel->delete($this->getById($id));
 
             return true;
         } catch (\Exception $e) {
-            throw new CouldNotDeleteException(__("Sorry. I cannot delete this student. =("));
+            throw new CouldNotDeleteException(__("Sorry. I cannot delete this brand. =("));
         }
     }
 
@@ -106,12 +122,12 @@ class StudentsRepository implements StudentsRepositoryInterface
     public function getById($id)
     {
         try {
-            $model = $this->studentsModelFactory->create();
-            $this->studentsResourceModel->load($model, $id);
+            $model = $this->brandsModelFactory->create();
+            $this->brandsResourceModel->load($model, $id);
 
             return $model;
         } catch (\Exception $e) {
-            throw new NoSuchEntityException(__("Sorry. No student with this id"));
+            throw new NoSuchEntityException(__("Sorry. No brand with this id"));
         }
     }
 
@@ -120,7 +136,7 @@ class StudentsRepository implements StudentsRepositoryInterface
      */
     public function getList($searchCriteria)
     {
-        $collection = $this->studentsCollectionFactory->create();
+        $collection = $this->brandsCollectionFactory->create();
 
         $this->collectionProcessor->process($searchCriteria, $collection);
 
@@ -134,10 +150,10 @@ class StudentsRepository implements StudentsRepositoryInterface
     }
 
     /**
-     * @return Students
+     * @return BrandsModel
      */
     public function getEmptyModel()
     {
-        return $this->studentsModelFactory->create();
+        return $this->brandsModelFactory->create();
     }
 }

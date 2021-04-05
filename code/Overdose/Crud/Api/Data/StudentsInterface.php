@@ -1,6 +1,8 @@
 <?php
 namespace Overdose\Crud\Api\Data;
 
+use Overdose\Crud\Setup\Patch\Data\StudentsModel;
+
 interface StudentsInterface
 {
     const TABLE_NAME = 'overdose_crud';
@@ -23,7 +25,7 @@ interface StudentsInterface
 
     /**
     * @param string|integer $age
-    * @return \Overdose\Crud\Api\Data\StudentsInterface|\Overdose\Crud\Model\Students
+    * @return StudentsInterface|StudentsModel
     */
     public function setAge($age);
 
@@ -34,7 +36,7 @@ interface StudentsInterface
 
     /**
     * @param string $name
-    * @return \Overdose\Crud\Api\Data\StudentsInterface|\Overdose\Crud\Model\Students
+    * @return StudentsInterface|StudentsModel
     */
     public function setName($name);
 
@@ -45,7 +47,7 @@ interface StudentsInterface
 
     /**
     * @param string $desc
-    * @return \Overdose\Crud\Api\Data\StudentsInterface|\Overdose\Crud\Model\Students
+    * @return StudentsInterface|StudentsModel
     */
     public function setComment($desc);
 
