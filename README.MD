@@ -12,3 +12,4 @@ Overdose Attributes - Lesson 8: Created attributes and different types products 
 Overdose CustomersLogger - Lesson 9: Created cron and run cron by shedule;<br>
 Overdose Widget - Lesson 10: Created accordion menu and get data from controller in JSON format;<br>
 Overdose CustomShipping - Lesson 10ext: Created own shipping method on checkout page.
+PronkoConsulting - Test task from ProncoConsulting Company for Junior Fullstack Magento2 Developer
