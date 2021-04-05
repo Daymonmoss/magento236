@@ -33,7 +33,7 @@ require(['jquery', 'jquery/ui'], function ($) {
         $('.main').draggable({
             handle: "header",
             axis: "x",
-            containment: [-210, 0, 0, 0],
+            containment: [-215, 0, 0, 0],
             distance: 0,
             cursor: "ew-resize"
         });
