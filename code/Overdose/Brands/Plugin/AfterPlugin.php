@@ -1,42 +1,42 @@
 <?php
 namespace Overdose\Brands\Plugin;
 
-use Magento\Product\Api\Data\CustomerExtensionFactory;
-use Magento\Product\Api\CustomerRepositoryInterface;
-use Magento\Product\Api\Data\ProductSearchResultsInterface;
+use Magento\Catalog\Api\Data\ProductExtensionFactory;
+use Magento\Catalog\Api\ProductRepositoryInterface;
+use Magento\Catalog\Api\Data\ProductSearchResultsInterface;
 
 class AfterPlugin
 {
     /**
-     * @var CustomerExtensionFactory
+     * @var ProductExtensionFactory
      */
-    private $customerExtensionFactory;
+    private $productExtensionFactory;
 
     public function __construct(
-        CustomerExtensionFactory $customerExtensionFactory
+        ProductExtensionFactory $productExtensionFactory
     ) {
-        $this->customerExtensionFactory = $customerExtensionFactory;
+        $this->productExtensionFactory = $productExtensionFactory;
     }
 
     /**
-     * @param CustomerRepositoryInterface $subject
-     * @param CustomerSearchResultsInterface $searchCriteria
-     * @return CustomerSearchResultsInterface
+     * @param ProductRepositoryInterface $subject
+     * @param ProductSearchResultsInterface $searchCriteria
+     * @return ProductSearchResultsInterface
      */
-    public function afterGetList(CustomerRepositoryInterface $subject, CustomerSearchResultsInterface $searchCriteria)
+    public function afterGetList(ProductRepositoryInterface $subject, ProductSearchResultsInterface $searchCriteria)
     {
-        $customers = [];
-        foreach ($searchCriteria->getItems() as $item) {
-            $datenow = date('D-F-Y H:i:s');
-
-            $extensionAttributes = $item->getExtensionAttributes();
-            $extensionAttributes = $extensionAttributes ? $extensionAttributes : $this->customerExtensionFactory->create();
-            $extensionAttributes->setExtractedAt($datenow);
-            $item->setExtensionAttributes($extensionAttributes);
-
-            $customers[] = $item;
-        }
-        $searchCriteria->setItems($customers);
-        return $searchCriteria;
+//        $products = [];
+//        foreach ($searchCriteria->getItems() as $item) {
+//            $datenow = date('D-F-Y H:i:s');
+//
+//            $extensionAttributes = $item->getExtensionAttributes();
+//            $extensionAttributes = $extensionAttributes ? $extensionAttributes : $this->customerExtensionFactory->create();
+//            $extensionAttributes->setExtractedAt($datenow);
+//            $item->setExtensionAttributes($extensionAttributes);
+//
+//            $customers[] = $item;
+//        }
+//        $searchCriteria->setItems($customers);
+//        return $searchCriteria;
     }
 }

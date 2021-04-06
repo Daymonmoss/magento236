@@ -58,12 +58,12 @@ class Save extends AbstractController implements ButtonProviderInterface
             $model->setBrandName($postData['brand_name'])
                   ->setBrandTitle($postData['brand_title']);
 
-            $this->friendRepositoryInterface->save($model);
+            $this->brandsRepositoryInterface->save($model);
 
-            $newFriendId = $model->getId();
+            $newBrandId = $model->getId();
 
             $this->messageManager->addSuccessMessage(__("Yay! Now you have a new brand! Successfully saved to the database!"));
-            $redirect->setPath(self::DEFAULT_ACTION_PATH . 'index', ['id' => $newFriendId]);
+            $redirect->setPath(self::DEFAULT_ACTION_PATH . 'index', ['id' => $newBrandId]);
         } catch (\Exception $e) {
             $this->messageManager->addErrorMessage(__("Sorry, was unable to save a brand form. =("));
             $redirect->setPath(self::DEFAULT_ACTION_PATH . 'index');

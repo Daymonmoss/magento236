@@ -33,7 +33,7 @@ class Edit extends AbstractController implements HttpGetActionInterface
     protected $resultPageFactory;
 
     /**
-     * Edit Friend;
+     * Edit Brand;
      * @return Page|Redirect|ResultInterface
      * @SuppressWarnings(PHPMD.NPathComplexity)
      * @var BrandsModelFactory $brandsModelFactory

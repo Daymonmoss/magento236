@@ -1,15 +1,25 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-    <virtualType name="GridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
+    <preference for="Overdose\Brands\Api\Data\BrandsInterface"
+                type="Overdose\Brands\Model\BrandsModel" />
+    <preference for="Overdose\Brands\Api\BrandsRepositoryInterface"
+                type="Overdose\Brands\Model\BrandsRepository" />
+    <virtualType name="Overdose\Brands\Model\BrandsResource\Grid\BrandsCollection\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
         <arguments>
-            <argument name="collection" xsi:type="object" shared="false">Overdose\Brands\Model\ResourceModel\Brands\Grid\Collection</argument>
+            <argument name="mainTable" xsi:type="string">overdose_brands</argument>
+            <argument name="resourceModel" xsi:type="string">Overdose\Brands\Model\BrandsResource\ResourceModel</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="OverdoseBrandsGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
+        <arguments>
+            <argument name="collection" xsi:type="object" shared="false">Overdose\Brands\Model\BrandsResource\Grid\BrandsCollection\Collection</argument>
         </arguments>
     </virtualType>
     <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
         <arguments>
             <argument name="collections" xsi:type="array">
-                <item name="overdose_brands_listing_data_source" xsi:type="string">Overdose\Brands\Model\ResourceModel\Brands\Grid\Collection</item>
+                <item name="overdose_brands_listing_data_source" xsi:type="string">Overdose\Brands\Model\BrandsResource\Grid\BrandsCollection\Collection</item>
             </argument>
         </arguments>
     </type>

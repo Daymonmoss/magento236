@@ -17,7 +17,7 @@
     </argument>
     <dataSource name="overdose_brands_listing_data_source">
         <argument name="dataProvider" xsi:type="configurableObject">
-            <argument name="class" xsi:type="string">GridDataProvider</argument>
+            <argument name="class" xsi:type="string">OverdoseBrandsGridDataProvider</argument>
             <argument name="name" xsi:type="string">overdose_brands_listing_data_source</argument>
             <argument name="primaryFieldName" xsi:type="string">id</argument>
             <argument name="requestFieldName" xsi:type="string">id</argument>
@@ -152,7 +152,7 @@
             <settings>
                 <filter>text</filter>
                 <bodyTmpl>ui/grid/cells/text</bodyTmpl>
-                <label translate="true">Comment</label>
+                <label translate="true">Brand Title</label>
                 <editor>
                     <validation>
                         <rule name="required-entry" xsi:type="boolean">true</rule>
