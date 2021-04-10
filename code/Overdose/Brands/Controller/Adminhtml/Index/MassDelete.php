@@ -14,7 +14,7 @@ class MassDelete extends AbstractController
         if (!empty($ids)) {
             foreach ($ids as $id) {
                 try {
-                    $this->friendRepositoryInterface->deleteById($id);
+                    $this->brandsRepositoryInterface->deleteById($id);
                 } catch (\Exception $e) {
                     $this->messageManager->addErrorMessage(__('Brand with id %1 not deleted', $id));
                 }

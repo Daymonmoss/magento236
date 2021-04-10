@@ -62,20 +62,20 @@ class BrandsRepository implements BrandsRepositoryInterface
         $this->searchResultsFactory = $searchResultsFactory;
     }
 
-//    /**
-//     * @inheritDoc
-//     */
-//    public function get($model)
-//    {
-//        try {
-//            $model = $this->brandsModelFactory->create();
-//            $this->brandsResourceModel->load($model);
-//
-//            return $model;
-//        } catch (\Exception $e) {
-//            throw new NoSuchEntityException(__("Sorry. This brand model doesn't exist"));
-//        }
-//    }
+    /**
+     * @inheritDoc
+     */
+    public function get($model)
+    {
+        try {
+            $model = $this->brandsModelFactory->create();
+            $this->brandsResourceModel->load($model);
+
+            return $model;
+        } catch (\Exception $e) {
+            throw new NoSuchEntityException(__("Sorry. This brand model doesn't exist"));
+        }
+    }
 
     /**
      * @inheritDoc

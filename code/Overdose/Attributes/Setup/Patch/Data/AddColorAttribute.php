@@ -10,6 +10,7 @@ use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
 use Overdose\Attributes\Model\Attribute\Backend\Color as Backend;
 use Overdose\Attributes\Model\Attribute\Frontend\Color as Frontend;
+use Magento\Swatches\Model\Swatch;
 //use Overdose\Attributes\Model\Attribute\Source\Color as Source;
 
 class AddColorAttribute implements DataPatchInterface
@@ -72,6 +73,27 @@ class AddColorAttribute implements DataPatchInterface
             'used_in_product_listing' => true,
             'is_html_alowed_on_front' => true,
             'unique' => false,
+            'swatch_input_type' => 'visual',
+//            'swatchvisual' => [
+//                'value' => [
+//                    'Obsidian' => '#3a322d',
+//                    'Pure' => '#0000ff',
+//                    'Crimson' => '#dc143c',
+//                    'Emerald' => '#50c878',
+//                    'Ametyst' => '#9966cc',
+//                ],
+//            ],
+//            'optionvisual' => [
+//                'values' => [
+//                    'Obsidian' => ['Obsidian'],
+//                    'Pure' => ['Pure'],
+//                    'Crimson' => ['Crimson'],
+//                    'Emerald' => ['Emerald'],
+//                    'Ametyst' => ['Ametyst'],
+//                ],
+//            ],
+//            'swatchvisual' => ['values' => ['#3a322d', '#0000ff', '#dc143c', '#50c878', '#9966cc']],
+//            'optionvisual' => ['values' => ['Obsidian', 'Pure', 'Crimson', 'Emerald', 'Ametyst']],
             'option' => ['values' => ['Obsidian', 'Pure', 'Crimson', 'Emerald', 'Ametyst']],
             'default' => '1'
         ]);

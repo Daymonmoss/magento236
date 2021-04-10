@@ -9,11 +9,11 @@ use Overdose\Brands\Model\BrandsModel;
 
 interface BrandsRepositoryInterface
 {
-//    /**
-//     * @param BrandsInterface|BrandsModel $model
-//     * @return BrandsInterface|BrandsModel
-//     */
-//    public function get($model);
+    /**
+     * @param BrandsInterface|BrandsModel $model
+     * @return BrandsInterface|BrandsModel
+     */
+    public function get($model);
 
     /**
      * @param BrandsInterface|BrandsModel $model

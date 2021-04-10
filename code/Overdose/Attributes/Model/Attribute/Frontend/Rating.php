@@ -11,7 +11,7 @@ class Rating extends AbstractFrontend
     {
         $value = $object->getData($this->getAttribute()->getAttributeCode());
 
-        return "<b>number_format($value, 1, '.', ' ')</b>";
+        return number_format($value, 1, '.', ' ');
 
     }
 }

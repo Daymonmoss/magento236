@@ -1,11 +1,19 @@
 <?php
-
 namespace Overdose\Brands\Model\Attribute\Source;
+
 use Magento\Eav\Model\Entity\Attribute\Source\AbstractSource;
+use Overdose\Brands\Model\BrandsResource\BrandsCollection\CollectionFactory;
 
 class Brand extends AbstractSource
 {
     protected $_options;
+
+    protected $collectionFactory;
+
+    public function __construct(CollectionFactory $collectionFactory)
+    {
+        $this->collectionFactory = $collectionFactory;
+    }
 
     /**
      * getAllOptions
@@ -14,27 +22,28 @@ class Brand extends AbstractSource
      */
     public function getAllOptions()
     {
-        if ($this->_options === null) {
-            $this->_options = [
-//                ['value' => 'Pure', 'label' => __('Pure')],
-//                ['value' => 'Obsidian', 'label' => __('Obsidian')],
-//                ['value' => 'Ametyst', 'label' => __('Ametyst')],
-//                ['value' => 'Emerald', 'label' => __('Emerald')],
-//                ['value' => 'Scarlet', 'label' => __('Scarlet')]
-            ];
+        if (!$this->_options) {
+            /** @var Collection $collection */
+            $collection = $this->collectionFactory->create();
+
+            $brands = $collection->getItems();
+
+            if (!$brands) {
+                return [];
+            }
+
+            $options = [];
+
+            foreach ($brands as $brand) {
+                $options[] = [
+                    'label' => $brand->getData('brand_name'),
+                    'value' => $brand->getData('brand_name')
+                ];
+            }
+
+            $this->_options = $options;
         }
+
         return $this->_options;
     }
-
-    final public function toOptionArray()
-    {
-        return [
-//            ['value' => 'Pure', 'label' => __('Pure')],
-//            ['value' => 'Obsidian', 'label' => __('Obsidian')],
-//            ['value' => 'Ametyst', 'label' => __('Ametyst')],
-//            ['value' => 'Emerald', 'label' => __('Emerald')],
-//            ['value' => 'Scarlet', 'label' => __('Scarlet')]
-        ];
-    }
-
 }

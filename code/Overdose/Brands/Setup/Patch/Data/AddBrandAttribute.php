@@ -52,7 +52,7 @@ class AddBrandAttribute implements DataPatchInterface
         $this->moduleDataSetup->startSetup();
         $eavSetup = $this->eavSetupFactory->create();
         $eavSetup->addAttribute(Product::ENTITY, 'overdose_brand', [
-            'type' => 'select',
+            'type' => 'varchar',
             'label' => 'Overdose Product Brand',
             'input' => 'select',
             'frontend' => Frontend::class,

@@ -75,7 +75,7 @@
                         <item name="label" xsi:type="string" translate="true">Delete Selected</item>
                         <item name="url" xsi:type="url" path="*/*/massDelete"/>
                         <item name="confirm" xsi:type="array">
-                            <item name="title" xsi:type="string" translate="true">Delete friends</item>
+                            <item name="title" xsi:type="string" translate="true">Delete brands</item>
                             <item name="message" xsi:type="string" translate="true">Are you sure you want to delete selected brands?</item>
                         </item>
                     </item>

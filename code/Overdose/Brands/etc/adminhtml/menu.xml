@@ -4,7 +4,7 @@
         <add id="Overdose_Brands::brands"
              title="OBrands"
              module="Overdose_Brands"
-             sortOrder="4"
+             sortOrder="11"
              resource="Overdose_Brands::brands"
              action="brands/index/index"/>
     </menu>
