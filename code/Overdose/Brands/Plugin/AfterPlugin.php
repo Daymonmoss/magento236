@@ -5,7 +5,6 @@ use Magento\Catalog\Api\Data\ProductInterface;
 use Magento\Catalog\Api\Data\ProductSearchResultsInterface;
 use Magento\Catalog\Api\ProductRepositoryInterface;
 use Magento\Catalog\Model\ResourceModel\Product\CollectionFactory;
-use Overdose\Brands\Api\BrandsRepositoryInterface;
 
 class AfterPlugin
 {
@@ -15,27 +14,20 @@ class AfterPlugin
      */
     private $collectionFactory;
 
-    /**
-     * @var BrandsRepositoryInterface
-     */
-    private $brandsRepository;
-
     public function __construct(
-        CollectionFactory $collectionFactory,
-        BrandsRepositoryInterface $brandsRepository
+        CollectionFactory $collectionFactory
     ) {
         $this->collectionFactory = $collectionFactory;
-        $this->brandsRepository = $brandsRepository;
     }
 
-    public function afterGet(productRepositoryInterface $subject, ProductInterface $entity)
+    public function afterGet(ProductRepositoryInterface $subject, ProductInterface $entity)
     {
         $collection = $this->collectionFactory->create();
 
         $count = $collection->getAttributeValueCount('overdose_brand');
 
         $extensionAttributes = $entity->getExtensionAttributes();
-        $extensionAttributes->setTotalBrandProducts($count);
+        $extensionAttributes->setTotalBrandProducts((int)$count);
         $entity->setExtensionAttributes($extensionAttributes);
 
         return $entity;
@@ -48,7 +40,7 @@ class AfterPlugin
         $count = $collection->getAttributeValueCount('overdose_brand');
 
         $extensionAttributes = $entity->getExtensionAttributes();
-        $extensionAttributes->setTotalBrandProducts($count);
+        $extensionAttributes->setTotalBrandProducts((int)$count);
         $entity->setExtensionAttributes($extensionAttributes);
 
         return $entity;
@@ -62,7 +54,7 @@ class AfterPlugin
             $count = $collection->getAttributeValueCount('overdose_brand');
 
             $extensionAttributes = $entity->getExtensionAttributes();
-            $extensionAttributes->setTotalBrandProducts($count);
+            $extensionAttributes->setTotalBrandProducts((int)$count);
             $entity->setExtensionAttributes($extensionAttributes);
 
             $products[] = $entity;

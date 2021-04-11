@@ -54,7 +54,7 @@ class StudentsRepository implements StudentsRepositoryInterface
         CollectionProcessorInterface $collectionProcessor,
         SearchResultsInterfaceFactory $searchResultsFactory
     ) {
-        $this->studentsFactory = $studentsModelFactory;
+        $this->studentsModelFactory = $studentsModelFactory;
         $this->studentsResourceModel = $studentsResourceModel;
         $this->studentsCollectionFactory = $studentsCollectionFactory;
         $this->collectionProcessor = $collectionProcessor;

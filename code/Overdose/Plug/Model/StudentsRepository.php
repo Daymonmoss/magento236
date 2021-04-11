@@ -7,21 +7,24 @@ use Magento\Framework\Exception\CouldNotDeleteException;
 use Magento\Framework\Exception\CouldNotSaveException;
 use Magento\Framework\Exception\NoSuchEntityException;
 use Overdose\Plug\Api\StudentsRepositoryInterface;
+use Overdose\Plug\Model\StudentsModelFactory;
+use Overdose\Plug\Model\StudentsResource\ResourceModel;
+use Overdose\Plug\Model\StudentsResource\StudentsCollection\CollectionFactory;
 
 class StudentsRepository implements StudentsRepositoryInterface
 {
     /**
-     * @var \Overdose\Plug\Model\StudentsFactory
+     * @var StudentsModelFactory
      */
-    protected $studentsFactory;
+    protected $studentsModelFactory;
 
     /**
-     * @var \Overdose\Plug\Model\ResourceModel\Studentsconnection
+     * @var ResourceModel
      */
     protected $studentsResourceModel;
 
     /**
-     * @var \Overdose\Plug\Model\ResourceModel\Collection\StudentscollectionFactory
+     * @var CollectionFactory
      */
     protected $studentsCollectionFactory;
 
@@ -38,20 +41,20 @@ class StudentsRepository implements StudentsRepositoryInterface
     /**
      * Newview constructor.
      *
-     * @param \Overdose\Plug\Model\StudentsFactory $studentsFactory
-     * @param \Overdose\Plug\Model\ResourceModel\Studentsconnection $studentsResourceModel
-     * @param ResourceModel\Collection\StudentscollectionFactory $studentsCollectionFactory
+     * @param StudentsModelFactory $studentsModelFactory
+     * @param ResourceModel $studentsResourceModel
+     * @param CollectionFactory $studentsCollectionFactory
      * @param CollectionProcessorInterface $collectionProcessor
      * @param SearchResultsInterfaceFactory $searchResultsFactory
      */
     public function __construct(
-        \Overdose\Plug\Model\StudentsFactory $studentsFactory,
-        \Overdose\Plug\Model\ResourceModel\Studentsconnection $studentsResourceModel,
-        \Overdose\Plug\Model\ResourceModel\Collection\StudentscollectionFactory $studentsCollectionFactory,
+        StudentsModelFactory $studentsModelFactory,
+        ResourceModel $studentsResourceModel,
+        CollectionFactory $studentsCollectionFactory,
         CollectionProcessorInterface $collectionProcessor,
         SearchResultsInterfaceFactory $searchResultsFactory
     ) {
-        $this->studentsFactory = $studentsFactory;
+        $this->studentsModelFactory = $studentsModelFactory;
         $this->studentsResourceModel = $studentsResourceModel;
         $this->studentsCollectionFactory = $studentsCollectionFactory;
         $this->collectionProcessor = $collectionProcessor;
@@ -103,7 +106,7 @@ class StudentsRepository implements StudentsRepositoryInterface
     public function getById($id)
     {
         try {
-            $model = $this->studentsFactory->create();
+            $model = $this->studentsModelFactory->create();
             $this->studentsResourceModel->load($model, $id);
 
             return $model;
@@ -131,10 +134,10 @@ class StudentsRepository implements StudentsRepositoryInterface
     }
 
     /**
-     * @return Students
+     * @return StudentsModel
      */
     public function getEmptyModel()
     {
-        return $this->studentsFactory->create();
+        return $this->studentsModelFactory->create();
     }
 }

@@ -5,18 +5,18 @@ use Magento\Framework\Api\SearchCriteria;
 use Magento\Framework\Api\SearchResultsInterface;
 use Magento\Framework\Exception\CouldNotDeleteException;
 use Overdose\Plug\Api\Data\StudentsInterface;
-use Overdose\Plug\Model\Students;
+use Overdose\Plug\Model\StudentsModel;
 
 interface StudentsRepositoryInterface
 {
     /**
-     * @param StudentsInterface|Students $model
-     * @return StudentsInterface|Students
+     * @param StudentsInterface|StudentsModel $model
+     * @return StudentsInterface|StudentsModel
      */
     public function save($model);
 
     /**
-     * @param StudentsInterface|Students $model
+     * @param StudentsInterface|StudentsModel $model
      * @return true
      * @throws CouldNotDeleteException
      */
@@ -24,7 +24,7 @@ interface StudentsRepositoryInterface
 
     /**
      * @param integer $id
-     * @return StudentsInterface|Students
+     * @return StudentsInterface|StudentsModel
      */
     public function getById($id);
 

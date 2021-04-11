@@ -1,10 +1,10 @@
 <?php
 
-namespace Overdose\Plug\Model\ResourceModel;
+namespace Overdose\Plug\Model\StudentsResource;
 
 use Magento\Framework\Model\ResourceModel\Db\AbstractDb;
 
-class Studentsconnection extends AbstractDb
+class ResourceModel extends AbstractDb
 {
     protected function _construct()
     {

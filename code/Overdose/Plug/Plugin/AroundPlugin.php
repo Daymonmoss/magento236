@@ -2,9 +2,11 @@
 
 namespace Overdose\Plug\Plugin;
 
+use Overdose\Plug\ViewModel\Newview;
+
 class AroundPlugin
 {
-    public function aroundGetName(\Overdose\Plug\ViewModel\Newview $subject, \Closure $proceed, $arg1, $arg2): string
+    public function aroundGetName(Newview $subject, \Closure $proceed, $arg1, $arg2): string
     {
         //Before plugin
         $arg1 = "After";

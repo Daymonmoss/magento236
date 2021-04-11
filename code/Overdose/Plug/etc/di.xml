@@ -3,7 +3,7 @@
   <type name="Overdose\Plug\ViewModel\Newview">
       <plugin name="overdose_plug_after" type="Overdose\Plug\Plugin\AfterPlugin" />
   </type>
-  <type name="Overdose\Plug\Model\ResourceModel\Collection\Studentscollection">
+  <type name="Overdose\Plug\Model\StudentsResource\StudentsCollection\Collection">
       <plugin name="overdose_plug_before" type="Overdose\Plug\Plugin\BeforePlugin" />
    </type>
     <type name="Magento\Framework\Console\CommandListInterface">

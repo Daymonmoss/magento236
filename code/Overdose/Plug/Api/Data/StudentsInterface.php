@@ -1,7 +1,7 @@
 <?php
 namespace Overdose\Plug\Api\Data;
 
-use Overdose\Plug\Model\Students;
+use Overdose\Plug\Model\StudentsModel;
 
 interface StudentsInterface
 {
@@ -25,7 +25,7 @@ interface StudentsInterface
 
     /**
     * @param string|integer $age
-    * @return StudentsInterface|Students
+    * @return StudentsInterface|StudentsModel
     */
     public function setAge($age);
 
@@ -36,7 +36,7 @@ interface StudentsInterface
 
     /**
     * @param string $name
-    * @return StudentsInterface|Students
+    * @return StudentsInterface|StudentsModel
     */
     public function setName($name);
 
@@ -47,7 +47,7 @@ interface StudentsInterface
 
     /**
     * @param string $desc
-    * @return StudentsInterface|Students
+    * @return StudentsInterface|StudentsModel
     */
     public function setComment($desc);
 

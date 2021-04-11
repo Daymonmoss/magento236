@@ -5,8 +5,8 @@ use Magento\Framework\Exception\CouldNotSaveException;
 use Magento\Framework\Message\ManagerInterface;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
-use Overdose\Plug\Model\ResourceModel\Studentsconnection;
-use Overdose\Plug\Model\StudentsFactory;
+use Overdose\Plug\Model\StudentsResource\ResourceModel;
+use Overdose\Plug\Model\StudentsModelFactory;
 
 class AddDataToTheTable implements DataPatchInterface
 {
@@ -21,12 +21,12 @@ class AddDataToTheTable implements DataPatchInterface
     public $e;
 
     /**
-     * @var StudentsFactory
+     * @var StudentsModelFactory
      */
     protected $model;
 
     /**
-     * @var Studentsconnection
+     * @var ResourceModel
      */
     protected $resourceModel;
 
@@ -39,16 +39,16 @@ class AddDataToTheTable implements DataPatchInterface
      * AddDataToTheTable constructor.
      *
      * @param ModuleDataSetupInterface $moduleDataSetup
-     * @param StudentsFactory $studentsModel
-     * @param Studentsconnection $studentsResourceModel
+     * @param StudentsModelFactory $studentsModelFactory
+     * @param ResourceModel $studentsResourceModel
      */
     public function __construct(
         ModuleDataSetupInterface  $moduleDataSetup,
-        StudentsFactory  $studentsModel,
-        Studentsconnection  $studentsResourceModel
+        StudentsModelFactory  $studentsModelFactory,
+        ResourceModel  $studentsResourceModel
     ) {
         $this->moduleDataSetup = $moduleDataSetup;
-        $this->model = $studentsModel;
+        $this->model = $studentsModelFactory;
         $this->resourceModel = $studentsResourceModel;
     }
 
