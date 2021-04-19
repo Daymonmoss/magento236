@@ -3,9 +3,8 @@
 namespace Overdose\Brands\Setup\Patch\Data;
 
 use Magento\Catalog\Model\Product;
-use Magento\Eav\Model\Entity\Attribute\Source\Table;
+use Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface;
 use Magento\Eav\Setup\EavSetupFactory;
-use Magento\Eav\Model\Entity\Attribute\OptionLabel;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
 use Overdose\Brands\Model\Attribute\Backend\Brand as Backend;
@@ -25,23 +24,15 @@ class AddBrandAttribute implements DataPatchInterface
     private $eavSetupFactory;
 
     /**
-     * @var OptionLabel
-     */
-    private $optionLabelFactory;
-
-    /**
      * @param ModuleDataSetupInterface $moduleDataSetup
      * @param EavSetupFactory $eavSetupFactory
-     * @param OptionLabel $optionLabelFactory
      */
     public function __construct(
         ModuleDataSetupInterface $moduleDataSetup,
-        EavSetupFactory $eavSetupFactory,
-        OptionLabel $optionLabelFactory
+        EavSetupFactory $eavSetupFactory
     ) {
         $this->moduleDataSetup = $moduleDataSetup;
         $this->eavSetupFactory = $eavSetupFactory;
-        $this->optionLabelFactory = $optionLabelFactory;
     }
 
     /**
@@ -52,21 +43,22 @@ class AddBrandAttribute implements DataPatchInterface
         $this->moduleDataSetup->startSetup();
         $eavSetup = $this->eavSetupFactory->create();
         $eavSetup->addAttribute(Product::ENTITY, 'overdose_brand', [
-            'type' => 'varchar',
+            'type' => 'int',
             'label' => 'Overdose Product Brand',
             'input' => 'select',
             'frontend' => Frontend::class,
             'backend' => Backend::class,
             'source' => Source::class,
             'required' => false,
-            'global' => \Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface::SCOPE_GLOBAL,
+            'global' => ScopedAttributeInterface::SCOPE_GLOBAL,
             'visible' => true,
             'is_used_in_grid' => true,
             'is_visible_in_grid' => true,
-            'is_filterable_in_grid' => true,
             'user_defined' => true,
             'searchable' => true,
             'filterable' => true,
+            'filterable_in_search' => true,
+            'is_filterable_in_grid' => true,
             'comparable' => true,
             'visible_on_front' => true,
             'used_in_product_listing' => true,
@@ -91,8 +83,16 @@ class AddBrandAttribute implements DataPatchInterface
 //        );
 
         $eavSetup->addAttributeToGroup(
-            \Magento\Catalog\Model\Product::ENTITY,
+            Product::ENTITY,
             'Default',
+            'Product Details',
+            'overdose_brand',
+            19
+        );
+
+        $eavSetup->addAttributeToGroup(
+            Product::ENTITY,
+            'Bottom',
             'Product Details',
             'overdose_brand',
             19

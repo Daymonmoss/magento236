@@ -4,9 +4,10 @@ namespace Overdose\Brands\Plugin;
 use Magento\Catalog\Api\Data\ProductInterface;
 use Magento\Catalog\Api\Data\ProductSearchResultsInterface;
 use Magento\Catalog\Api\ProductRepositoryInterface;
+use Magento\Catalog\Model\ProductRepository;
 use Magento\Catalog\Model\ResourceModel\Product\CollectionFactory;
 
-class AfterPlugin
+class Plugin
 {
 
     /**
@@ -27,7 +28,7 @@ class AfterPlugin
         $count = $collection->getAttributeValueCount('overdose_brand');
 
         $extensionAttributes = $entity->getExtensionAttributes();
-        $extensionAttributes->setTotalBrandProducts((int)$count);
+        $extensionAttributes->setTotalBrandProducts(10);
         $entity->setExtensionAttributes($extensionAttributes);
 
         return $entity;
@@ -40,7 +41,7 @@ class AfterPlugin
         $count = $collection->getAttributeValueCount('overdose_brand');
 
         $extensionAttributes = $entity->getExtensionAttributes();
-        $extensionAttributes->setTotalBrandProducts((int)$count);
+        $extensionAttributes->setTotalBrandProducts(10);
         $entity->setExtensionAttributes($extensionAttributes);
 
         return $entity;

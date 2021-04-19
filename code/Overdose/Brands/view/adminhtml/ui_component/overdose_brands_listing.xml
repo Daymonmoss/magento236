@@ -5,7 +5,7 @@
             <item name="provider" xsi:type="string">overdose_brands_listing.overdose_brands_listing_data_source</item>
             <item name="deps" xsi:type="string">overdose_brands_listing.overdose_brands_listing_data_source</item>
         </item>
-        <item name="spinner" xsi:type="string">brands_grid_columns</item>
+        <item name="spinner" xsi:type="string">overdose_brands_columns</item>
         <item name="buttons" xsi:type="array">
             <item name="add" xsi:type="array">
                 <item name="name" xsi:type="string">add</item>
@@ -98,7 +98,7 @@
         <paging name="listing_paging"/>
     </listingToolbar>
 
-    <columns name="brands_grid_columns">
+    <columns name="overdose_brands_columns">
         <settings>
             <editorConfig>
                 <param name="clientConfig" xsi:type="array">
@@ -164,7 +164,7 @@
         <actionsColumn name="actions" class="Overdose\Brands\Ui\Component\Listing\Column\Actions" sortOrder="50">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <!--item name="viewUrlPath" xsi:type="string">brands/index/edit</item-->
+                    <item name="viewUrlPath" xsi:type="string">brands/index/edit</item>
                     <item name="urlEntityParamName" xsi:type="string">id</item>
                     <item name="indexField" xsi:type="string">id</item>
                 </item>

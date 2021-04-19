@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-    <type name="Magento\Catalog\Model\Product">
-        <plugin name="product_title" type="Overdose\Brands\Plugin\TitleBrandPlugin" />
+    <type name="Magento\Catalog\Api\Data\ProductInterface">
+        <plugin name="overdose_brands_titlebrandplugin" type="Overdose\Brands\Plugin\TitleBrandPlugin" />
     </type>
 </config>
 

@@ -3,6 +3,7 @@ namespace Overdose\Brands\Model\Attribute\Source;
 
 use Magento\Eav\Model\Entity\Attribute\Source\AbstractSource;
 use Overdose\Brands\Model\BrandsResource\BrandsCollection\CollectionFactory;
+use Overdose\Brands\Model\BrandsResource\BrandsCollection\Collection;
 
 class Brand extends AbstractSource
 {
@@ -37,7 +38,7 @@ class Brand extends AbstractSource
             foreach ($brands as $brand) {
                 $options[] = [
                     'label' => $brand->getData('brand_name'),
-                    'value' => $brand->getData('brand_name')
+                    'value' => $brand->getData('id')
                 ];
             }
 

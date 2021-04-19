@@ -88,7 +88,7 @@
                         <item name="label" xsi:type="string" translate="true">Edit Selected</item>
                         <item name="url" xsi:type="url" path="*/*/inlineEdit"/>
                         <item name="callback" xsi:type="array">
-                            <item name="provider" xsi:type="string">overdose_friends_listing.overdose_friends_listing.overdose_friends_columns_editor</item>
+                            <item name="provider" xsi:type="string">overdose_friends_listing.overdose_friends_listing.friends_grid_columns_editor</item>
                             <item name="target" xsi:type="string">editSelected</item>
                         </item>
                     </item>
@@ -107,11 +107,11 @@
                 </param>
                 <param name="indexField" xsi:type="string">id</param>
                 <param name="enabled" xsi:type="boolean">true</param>
-                <param name="selectProvider" xsi:type="string">overdose_friends_listing.overdose_friends_listing.overdose_friends_columns.ids</param>
+                <param name="selectProvider" xsi:type="string">overdose_friends_listing.overdose_friends_listing.friends_grid_columns.ids</param>
             </editorConfig>
             <childDefaults>
                 <param name="fieldAction" xsi:type="array">
-                    <item name="provider" xsi:type="string">overdose_friends_listing.overdose_friends_listing.overdose_friends_columns_editor</item>
+                    <item name="provider" xsi:type="string">overdose_friends_listing.overdose_friends_listing.friends_grid_columns_editor</item>
                     <item name="target" xsi:type="string">startEdit</item>
                     <item name="params" xsi:type="array">
                         <item name="0" xsi:type="string">${ $.$data.rowIndex }</item>

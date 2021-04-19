@@ -52,7 +52,7 @@ class Save extends AbstractController implements ButtonProviderInterface
 
             if (!empty($postData['id'])) {
                 try {
-                    $model = $this->friendRepositoryInterface->getById((int)$postData['id']);
+                    $model = $this->friendRepository->getById((int)$postData['id']);
                 } catch (LocalizedException $e) {
                     $this->messageManager->addErrorMessage(__('This friend no longer exists.'));
                     return $redirect->setPath(self::DEFAULT_ACTION_PATH);
@@ -63,7 +63,7 @@ class Save extends AbstractController implements ButtonProviderInterface
                 ->setAge((int)$postData['age'])
                 ->setComment($postData['comment']);
 
-            $this->friendRepositoryInterface->save($model);
+            $this->friendRepository->save($model);
 
             $newFriendId = $model->getId();
 

@@ -24,6 +24,6 @@
         </arguments>
     </type>
     <type name="Magento\Catalog\Api\ProductRepositoryInterface">
-        <plugin name="overdose_brands_afterplugin" type="Overdose\Brands\Plugin\AfterPlugin" />
+        <plugin name="overdose_brands_plugin" type="Overdose\Brands\Plugin\Plugin" />
     </type>
 </config>

@@ -2,9 +2,8 @@
 
 namespace Overdose\Brands\Plugin;
 
-use Magento\Catalog\Model\Product;
-use Magento\Catalog\Model\ResourceModel\Product\CollectionFactory;
 use Magento\Catalog\Api\Data\ProductInterface;
+use Magento\Catalog\Model\ResourceModel\Product\CollectionFactory;
 
 class TitleBrandPlugin
 {
@@ -14,28 +13,20 @@ class TitleBrandPlugin
     protected $productCollectionFactory;
 
     /**
-     * @var ProductInterface
-     */
-    protected $productInterface;
-
-    /**
      * @param CollectionFactory $productCollectionFactory
-     * @param ProductInterface $productInterface
      */
     public function __construct(
-        CollectionFactory $productCollectionFactory,
-        ProductInterface $productInterface
+        CollectionFactory $productCollectionFactory
     ) {
         $this->productCollectionFactory = $productCollectionFactory;
-        $this->productInterface = $productInterface;
     }
 
-    public function afterGetName(Product $subject, $result)
+    public function afterGetName(ProductInterface $subject, $result)
     {
-        $brand = $subject->getResource()->getAttribute('overdose_brand')->getFrontend()->getValue($subject);
-
-        if ($brand !== null) {
-            $brand = " (" . $brand . "," . $subject->getExtensionAttributes()->getTotalBrandProducts() . " total)";
+        $brand = $subject->getAttributeText('overdose_brand');
+        $brand_count = $subject->getExtensionAttributes()->getTotalBrandProducts();
+        if ($brand !== false) {
+            $brand = " (" . $brand . "," . $brand_count . " total)";
         }
 
         return $result . "\n" . $brand;

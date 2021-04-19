@@ -3,6 +3,7 @@
 namespace Overdose\Attributes\Setup\Patch\Data;
 
 use Magento\Catalog\Model\Product;
+use Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface;
 use Magento\Eav\Setup\EavSetupFactory;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
@@ -47,17 +48,37 @@ class AddAttribute implements DataPatchInterface
             'backend' => Backend::class,
             'frontend' => Frontend::class,
             "required" => false,
-            'global' => \Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface::SCOPE_GLOBAL,
+            'global' => ScopedAttributeInterface::SCOPE_GLOBAL,
             'visible' => true,
+            'is_used_in_grid' => true,
+            'is_visible_in_grid' => true,
             'user_defined' => true,
             'searchable' => true,
             'filterable' => true,
+            'filterable_in_search' => true,
+            'is_filterable_in_grid' => true,
             'comparable' => true,
             'visible_on_front' => true,
             'used_in_product_listing' => true,
             'is_html_alowed_on_front' => true,
-            'unique' => false,
+            'unique' => false
         ]);
+
+        $eavSetup->addAttributeToGroup(
+            Product::ENTITY,
+            'Default',
+            'Product Details',
+            'overdose_product_rating',
+            17
+        );
+
+        $eavSetup->addAttributeToGroup(
+            Product::ENTITY,
+            'Bottom',
+            'Product Details',
+            'overdose_product_rating',
+            17
+        );
         $this->moduleDataSetup->endSetup();
     }
 

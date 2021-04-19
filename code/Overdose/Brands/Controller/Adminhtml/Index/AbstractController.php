@@ -3,14 +3,15 @@ namespace Overdose\Brands\Controller\Adminhtml\Index;
 
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
-use Overdose\Brands\Model\BrandsModelFactory;
-use Overdose\Brands\Model\BrandsResource\ResourceModel;
-use Overdose\Brands\Model\BrandsResource\BrandsCollection\CollectionFactory;
+use Magento\Ui\Component\MassAction\Filter;
+use Magento\Framework\Controller\Result\JsonFactory;
 use Overdose\Brands\Api\BrandsRepositoryInterface;
+use Overdose\Brands\Model\BrandsModelFactory;
+use Overdose\Brands\Model\BrandsResource\BrandsCollection\CollectionFactory;
+use Overdose\Brands\Model\BrandsResource\ResourceModel;
 
 abstract class AbstractController extends Action
 {
-
     const DEFAULT_ACTION_PATH = 'brands/index/';
     /**
      * @var BrandsModelFactory
@@ -18,7 +19,7 @@ abstract class AbstractController extends Action
     protected $brandsModelFactory;
 
     /**
-     * @var RecourceModel
+     * @var ResourceModel
      */
     protected $brandsResourceModel;
 
@@ -30,26 +31,39 @@ abstract class AbstractController extends Action
     /**
      * @var BrandsRepositoryInterface
      */
-    protected $brandsRepositoryInterface;
+    protected $brandsRepository;
+
+    /**
+     * @var JsonFactory
+     */
+    protected $jsonFactory;
+
+    /**
+     * @var Filter
+     */
+    protected $filter;
 
     public function __construct(
         Context $context,
         BrandsModelFactory $brandsModelFactory,
         ResourceModel $brandsResourceModel,
         CollectionFactory $brandsCollectionFactory,
-        BrandsRepositoryInterface $brandsRepositoryInterface
+        BrandsRepositoryInterface $brandsRepository,
+        JsonFactory $jsonFactory,
+        Filter $filter
     ) {
         parent::__construct($context);
         $this->brandsModelFactory = $brandsModelFactory;
         $this->brandsResourceModel = $brandsResourceModel;
         $this->brandsCollectionFactory = $brandsCollectionFactory;
-        $this->brandsRepositoryInterface = $brandsRepositoryInterface;
+        $this->brandsRepository = $brandsRepository;
+        $this->jsonFactory = $jsonFactory;
+        $this->filter = $filter;
     }
 
-    public function getAllFriends()
+    public function getAllBrands()
     {
         $collection = $this->brandsCollectionFactory->create();
         return $collection->getItems();
     }
-
 }

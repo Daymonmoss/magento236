@@ -3,6 +3,8 @@ namespace Overdose\AdminPanel\Controller\Adminhtml\Index;
 
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
+use Magento\Ui\Component\MassAction\Filter;
+use Magento\Framework\Controller\Result\JsonFactory;
 use Overdose\LessonOne\Model\FriendsFactory;
 use Overdose\LessonOne\Model\ResourceModel\Friends;
 use Overdose\LessonOne\Api\FriendRepositoryInterface;
@@ -29,14 +31,26 @@ abstract class AbstractController extends Action
     /**
      * @var FriendRepositoryInterface
      */
-    protected $friendRepositoryInterface;
+    protected $friendRepository;
+
+    /**
+     * @var JsonFactory
+     */
+    protected $jsonFactory;
+
+    /**
+     * @var Filter
+     */
+    protected $filter;
 
     public function __construct(
         Context $context,
         FriendsFactory $friendsFactory,
         Friends $friendsResourceModel,
         \Overdose\LessonOne\Model\ResourceModel\Collection\FriendsFactory $friendsCollectionFactory,
-        FriendRepositoryInterface $friendRepositoryInterface
+        FriendRepositoryInterface $friendRepository,
+        JsonFactory $jsonFactory,
+        Filter $filter
 
         // TODO: Add your repository or model/resourceModel classes here
     ) {
@@ -44,7 +58,9 @@ abstract class AbstractController extends Action
         $this->friendsFactory = $friendsFactory;
         $this->friendsResourceModel = $friendsResourceModel;
         $this->friendsCollectionFactory = $friendsCollectionFactory;
-        $this->friendRepositoryInterface = $friendRepositoryInterface;
+        $this->friendRepository = $friendRepository;
+        $this->jsonFactory = $jsonFactory;
+        $this->filter = $filter;
         // TODO: Assign them to the protected variable, so that child classes can access it
     }
 

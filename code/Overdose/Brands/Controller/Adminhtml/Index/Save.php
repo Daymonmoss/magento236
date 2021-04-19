@@ -48,7 +48,7 @@ class Save extends AbstractController implements ButtonProviderInterface
 
             if (!empty($postData['id'])) {
                 try {
-                    $model = $this->brandsRepositoryInterface->getById((int)$postData['id']);
+                    $model = $this->brandsRepository->getById((int)$postData['id']);
                 } catch (LocalizedException $e) {
                     $this->messageManager->addErrorMessage(__('This brand no longer exists.'));
                     return $redirect->setPath(self::DEFAULT_ACTION_PATH);
@@ -58,7 +58,7 @@ class Save extends AbstractController implements ButtonProviderInterface
             $model->setBrandName($postData['brand_name'])
                   ->setBrandTitle($postData['brand_title']);
 
-            $this->brandsRepositoryInterface->save($model);
+            $this->brandsRepository->save($model);
 
             $newBrandId = $model->getId();
 
